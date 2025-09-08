@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ideas on Sakuryo App Blog</title>
+    <link>https://blog.sakuryo.app/tags/ideas/</link>
+    <description>Recent content in Ideas on Sakuryo App Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.sakuryo.app/tags/ideas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Initial Ideas Must Haves for the App</title>
+      <link>https://blog.sakuryo.app/posts/1-scratching-out-some-initial-ideas/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/1-scratching-out-some-initial-ideas/</guid>
+      <description>&lt;h1 id=&#34;what-sakuryo-can-do-for-me&#34;&gt;What Sakuryo can do for &lt;em&gt;Me&lt;/em&gt;&lt;/h1&gt;&#xA;&lt;p&gt;I like data and I love to see visually my progress in Learning Japanese. I want a way to see where I am at and feel good about my progress. I also want to see very clearly, opportunities for improvement.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

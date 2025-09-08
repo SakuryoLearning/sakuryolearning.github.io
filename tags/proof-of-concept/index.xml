@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proof of Concept on Sakuryo App Blog</title>
+    <link>https://blog.sakuryo.app/tags/proof-of-concept/</link>
+    <description>Recent content in Proof of Concept on Sakuryo App Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Mon, 17 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.sakuryo.app/tags/proof-of-concept/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data, Pipelines, The second POC - A JP-EN Dictionary</title>
+      <link>https://blog.sakuryo.app/posts/4-data-piplenes-and-second-poc/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/4-data-piplenes-and-second-poc/</guid>
+      <description>&lt;h1 id=&#34;creating-sakuryos-dictionary&#34;&gt;Creating Sakuryo&amp;rsquo;s Dictionary&lt;/h1&gt;&#xA;&lt;p&gt;In my ideas post I mentioned that the app will need data sources and a way to query them though a catalog/dictionary&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Draw the Kana - Version 2</title>
+      <link>https://blog.sakuryo.app/posts/3-version-2-drawing-characters/</link>
+      <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/3-version-2-drawing-characters/</guid>
+      <description>&lt;h1 id=&#34;can-i-write-hiragana-correctly-lets-see-version-2&#34;&gt;Can I write Hiragana Correctly? Let’s See! Version 2&lt;/h1&gt;&#xA;&lt;p&gt;In the last post I expressed some dissatisfaction with the current prototype and some ideas about changes I could make&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My first Proof of Concept - Draw the Kana</title>
+      <link>https://blog.sakuryo.app/posts/2-first-poc-drawing-characters/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/2-first-poc-drawing-characters/</guid>
+      <description>&lt;h1 id=&#34;can-i-write-hiragana-correctly-lets-see&#34;&gt;Can I write Hiragana Correctly? Let’s See!&lt;/h1&gt;&#xA;&lt;p&gt;This post is going up a bit after my progress with most of the work being done on Feb 20.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SRS on Sakuryo App Blog</title>
+    <link>https://blog.sakuryo.app/tags/srs/</link>
+    <description>Recent content in SRS on Sakuryo App Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Wed, 09 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.sakuryo.app/tags/srs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding Prebuilt SRS Anime word Decks to Sakuryo</title>
+      <link>https://blog.sakuryo.app/posts/9-anime-word-srs-decks/</link>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/9-anime-word-srs-decks/</guid>
+      <description>&lt;h1 id=&#34;choose-an-anime-episode-or-series-to-study-and-add-the-words-to-your-study-deck&#34;&gt;Choose an anime episode or series to study and add the words to your study deck.&lt;/h1&gt;&#xA;&lt;p&gt;This feature is and has been taking almost a week to make due to technical challenges and my optimism that I can make it exactly like I want it to be. You can now select an anime episode or series to study and view the words that are in each episode ordered by the frequency that the appear in the episode. There are also now button to quick add the words to your study deck from either an episode or series.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Learning Jouyou Kanji, a little Analytics, backend updates</title>
+      <link>https://blog.sakuryo.app/posts/8-learning-jouyou-kanji/</link>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/8-learning-jouyou-kanji/</guid>
+      <description>&lt;h1 id=&#34;a-little-bit-of-collapsible-analytics-and-a-jouyou-kanji-deck-build-in&#34;&gt;A little bit of collapsible analytics and A Jouyou kanji deck build in&lt;/h1&gt;&#xA;&lt;h4 id=&#34;also-mobile-screens&#34;&gt;Also, mobile screens&lt;/h4&gt;&#xA;&lt;p&gt;I have spent a little bit of time working on the kanji Study feature trying to get it to the point where I can find it useful. For me that means at least a built-in study deck and some analytic.&#xA;And that is what we have here&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sakuryo&#39;s new look &amp; SRS based Kanji learning.</title>
+      <link>https://blog.sakuryo.app/posts/7-a-new-look-kanji-flash-cards/</link>
+      <pubDate>Thu, 27 Mar 2025 18:03:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/7-a-new-look-kanji-flash-cards/</guid>
+      <description>&lt;h1 id=&#34;creating-sakuryos-kanji-srs&#34;&gt;Creating Sakuryo&amp;rsquo;s Kanji SRS&lt;/h1&gt;&#xA;&lt;p&gt;Sakuryo has a color scheme and a new navigation bar on the Left side as well as SRS based Kanji study.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Simple Centralized SRS</title>
+      <link>https://blog.sakuryo.app/posts/6-a-simple-srs/</link>
+      <pubDate>Mon, 24 Mar 2025 15:41:25 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/6-a-simple-srs/</guid>
+      <description>&lt;h1 id=&#34;creating-sakuryos-srs&#34;&gt;Creating Sakuryo&amp;rsquo;s SRS&lt;/h1&gt;&#xA;&lt;p&gt;Sakuryo now has the beginnings of a Anki compatible SRS  that can take words directly from the dictionary and store them with your user data. The data is 100% exportable to Anki for offline study, I just have to get the formatting nice before I create that feature&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anime on Sakuryo App Blog</title>
+    <link>https://blog.sakuryo.app/tags/anime/</link>
+    <description>Recent content in Anime on Sakuryo App Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Wed, 09 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.sakuryo.app/tags/anime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding Prebuilt SRS Anime word Decks to Sakuryo</title>
+      <link>https://blog.sakuryo.app/posts/9-anime-word-srs-decks/</link>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/9-anime-word-srs-decks/</guid>
+      <description>&lt;h1 id=&#34;choose-an-anime-episode-or-series-to-study-and-add-the-words-to-your-study-deck&#34;&gt;Choose an anime episode or series to study and add the words to your study deck.&lt;/h1&gt;&#xA;&lt;p&gt;This feature is and has been taking almost a week to make due to technical challenges and my optimism that I can make it exactly like I want it to be. You can now select an anime episode or series to study and view the words that are in each episode ordered by the frequency that the appear in the episode. There are also now button to quick add the words to your study deck from either an episode or series.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

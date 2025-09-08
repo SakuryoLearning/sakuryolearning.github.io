@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Sakuryo App Blog</title>
+    <link>https://blog.sakuryo.app/tags/</link>
+    <description>Recent content in Tags on Sakuryo App Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Wed, 09 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.sakuryo.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anime</title>
+      <link>https://blog.sakuryo.app/tags/anime/</link>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/tags/anime/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>https://blog.sakuryo.app/tags/development/</link>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SRS</title>
+      <link>https://blog.sakuryo.app/tags/srs/</link>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/tags/srs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Feature</title>
+      <link>https://blog.sakuryo.app/tags/feature/</link>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/tags/feature/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kanji</title>
+      <link>https://blog.sakuryo.app/tags/kanji/</link>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/tags/kanji/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dictionary</title>
+      <link>https://blog.sakuryo.app/tags/dictionary/</link>
+      <pubDate>Mon, 24 Mar 2025 15:41:25 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/tags/dictionary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proof of Concept</title>
+      <link>https://blog.sakuryo.app/tags/proof-of-concept/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/tags/proof-of-concept/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ideas</title>
+      <link>https://blog.sakuryo.app/tags/ideas/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/tags/ideas/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

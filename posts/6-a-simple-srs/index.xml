@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Simple Centralized SRS on Sakuryo App Blog</title>
+    <link>https://blog.sakuryo.app/posts/6-a-simple-srs/</link>
+    <description>Recent content in A Simple Centralized SRS on Sakuryo App Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://blog.sakuryo.app/posts/6-a-simple-srs/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
