@@ -2,31 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.sakuryo.app/categories/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.sakuryo.app/posts/10-moving-too-quickly/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.sakuryo.app/categories/development/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.sakuryo.app/tags/development/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.sakuryo.app/posts/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.sakuryo.app/tags/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.sakuryo.app/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.sakuryo.app/posts/9-anime-word-srs-decks/</loc>
     <lastmod>2025-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.sakuryo.app/tags/anime/</loc>
     <lastmod>2025-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.sakuryo.app/categories/</loc>
-    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.sakuryo.app/categories/development/</loc>
-    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.sakuryo.app/tags/development/</loc>
-    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.sakuryo.app/posts/</loc>
-    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.sakuryo.app/tags/srs/</loc>
-    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.sakuryo.app/tags/</loc>
-    <lastmod>2025-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.sakuryo.app/</loc>
     <lastmod>2025-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.sakuryo.app/tags/feature/</loc>

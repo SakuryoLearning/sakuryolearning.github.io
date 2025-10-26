@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Wed, 09 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.sakuryo.app/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Defining and releasing a MVP</title>
+      <link>https://blog.sakuryo.app/posts/10-moving-too-quickly/</link>
+      <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.sakuryo.app/posts/10-moving-too-quickly/</guid>
+      <description>&lt;h1 id=&#34;i-have-started-so-many-different-features-but-have-not-really-finished-much-to-my-likeing-&#34;&gt;I have started so many different features but have not really finished much to my likeing .&lt;/h1&gt;&#xA;&lt;p&gt;The dictionary does not have pagnation. The Anime Serires and deck pages are hard to navigate. Kana study is a copy of Kanji study and it does not quite fit. There seems to be quite a few things that are not really adding up to the product that I wanted to create and not to mention many things that are still just in my imagination.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Adding Prebuilt SRS Anime word Decks to Sakuryo</title>
       <link>https://blog.sakuryo.app/posts/9-anime-word-srs-decks/</link>
