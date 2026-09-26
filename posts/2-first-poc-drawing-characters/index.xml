@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>My first Proof of Concept - Draw the Kana on Sakuryo App Blog</title>
-    <link>https://blog.sakuryo.app/posts/2-first-poc-drawing-characters/</link>
-    <description>Recent content in My first Proof of Concept - Draw the Kana on Sakuryo App Blog</description>
-    <generator>Hugo</generator>
-    <language>en-US</language>
-    <copyright>{year}</copyright>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://blog.sakuryo.app/posts/2-first-poc-drawing-characters/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+	<channel>
+		<title>My first Proof of Concept - Draw the Kana on Momiji Blog</title>
+		<link>https://blog.momiji.app/posts/2-first-poc-drawing-characters/</link>
+		<description>Recent content in My first Proof of Concept - Draw the Kana on Momiji Blog</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+			<copyright>{year}</copyright>
+		
+		
+			<lastBuildDate></lastBuildDate>
+		
+			<atom:link href="https://blog.momiji.app/posts/2-first-poc-drawing-characters/index.xml" rel="self" type="application/rss+xml" />
+	</channel>
 </rss>
