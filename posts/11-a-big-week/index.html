@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Changelog: Sentence Decks, Recommendations, Analytics and Momiji Goes Live</title>
+<meta
+  name="description"
+  content="A week of changes: sentence decks, word recommendations, a real analytics page, dark mode, account deletion, and Momiji moving to its own servers at momiji.app."
+/>
+<link rel="canonical" href="https://blog.momiji.app/posts/11-a-big-week/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.png" />
+
+
+
+<script type="module">
+  import { initAnalytics } from "\/js\/analytics.js";
+  initAnalytics({
+    gaId: "G-DB01CZXKWH",
+    privacyPolicyUrl: "https://momiji.app/privacy",
+  });
+</script>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+
+<link rel="stylesheet" href="https://blog.momiji.app/css/app.min.af73202a3228d92c7f59aea5ca8fb133a7ccbcf364e9b97acc2a6c9cae3e56d6.css" integrity="sha256-r3MgKjIo2Sx/Wa6lyo+xM6fMvPNk6bl6zCpsnK4+VtY=" /></head>
+
+  <body>
+    <header class="site-bar">
+  <div class="site-bar-inner">
+    
+
+<a class="site-brand" href="https://blog.momiji.app/">
+  
+  <img src="/img/favicon_hu_55ce9425326ae395.png" width="36" height="36" alt="" />
+  
+  <span class="site-brand-name">Momiji</span>
+  <span class="site-brand-tag">blog</span>
+</a>
+
+    <nav class="site-nav">
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About
+      </a>
+    </li>
+    
+    <li>
+      <a href="/posts" class="">
+        Posts
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+
+    <div class="site-actions">
+      
+      <a class="app-button" href="https://momiji.app">Open the app</a>
+      
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  </div>
+</header>
+
+
+    <main id="content" class="w-full max-w-screen-md mx-auto px-4 pt-10 flex-1">
+
+
+
+
+<div class="flex flex-col gap-1">
+  <h1 class="text-2xl font-extrabold">
+    
+      Changelog: Sentence Decks, Recommendations, Analytics and Momiji Goes Live
+      
+    </h1>
+  
+  
+    <h1 id="what-changed-in-momiji-this-week">What changed in Momiji this week</h1>
+<p>After the last post I said I would focus on one feature at a time, finish it, and get Momiji somewhere I would actually want to use every day. This is what came out of the last week or so. Most of it is one big feature (sentence decks), but a lot of smaller things got finished along the way.</p>
+<h2 id="highlights">Highlights</h2>
+<ul>
+<li><strong>Sentence decks:</strong> study your own sentences with spaced repetition, with words found, translated and tracked for you.</li>
+<li><strong>Recommended next:</strong> the dashboard now suggests which words to learn next, and why.</li>
+<li><strong>Analytics overview:</strong> streak, retention, a year heatmap, and a forecast of what is coming due.</li>
+<li><strong>Dark mode and a Settings page</strong>, plus the ability to delete your account.</li>
+<li><strong>Momiji is live at momiji.app</strong>, running on my own servers with monitoring.</li>
+</ul>
+<h2 id="sentence-decks">Sentence decks</h2>
+<p>This is the big one. You can now make a deck of your own sentences: lines from an episode you paused on, something from a book, a phrase a friend sent you. Paste them in (one per line, or split at sentence ends, or a TSV with translations) and Momiji finds every word in them using the same matcher that builds the anime word lists.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/11-a-big-week/sentence-deck.png"  alt="A sentence deck page"  width="1920" height="1725" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      A sentence deck. Each word is underlined in the colour of how well you know it.
+    </figcaption>
+  
+</figure>
+<ul>
+<li><strong>Progress on every word.</strong> Each word is underlined in the colour of how well you know it. If the parser picked the wrong dictionary entry you can click the word to choose another meaning, mark it as not a word, or hand it back to the parser.</li>
+<li><strong>Readability.</strong> The deck page shows how much of the deck&rsquo;s vocabulary you know (6 of 20 words, 30%), how many sentences you can read completely, and the closest next step: sentences that are one new word away.</li>
+<li><strong>Study them with FSRS.</strong> Sentences have their own review page with a furigana toggle (readings over the kanji only) and no underlines on the front, so they don&rsquo;t give hints. Click or press space to see the translation and every word with its reading and meaning, then answer Again, Hard, Good or Easy (keys 1 to 4).</li>
+</ul>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/11-a-big-week/sentence-review.png"  alt="Reviewing a sentence"  width="1350" height="1500" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      Reviewing a sentence. Tap a word you didn&#39;t know and it is saved with the review.
+    </figcaption>
+  
+</figure>
+<ul>
+<li><strong>Sentence reviews feed your word cards.</strong> Tap a word you didn&rsquo;t know while reviewing: if you have studied it, it goes back to review; if you haven&rsquo;t, it is added to your word deck (or to the front of the line, or just noted; it is your choice). When you pass a sentence, the other words in it that are due today get credit too. It never happens from a failed sentence, and never for new cards. All of this is in a new Study section on the Settings page, and each word review is logged with where it came from.</li>
+<li><strong>Translations.</strong> You can add your own translation in place, or ask for an AI translation of one sentence or a whole deck (limited to 100 a day). Every translation says whose it is, and the AI never overwrites one you wrote. If the AI runs out of credits, sentences are still parsed with the likeliest dictionary entry and get fixed up later.</li>
+<li><strong>Sentences show up elsewhere.</strong> The back of a word flashcard shows up to two of your own sentences with the word highlighted, dictionary results say &ldquo;In N of your sentences&rdquo;, and the dashboard has a Sentences Due histogram.</li>
+<li><strong>Export and import.</strong> Decks are shared only as files. Export a Momiji deck file, a TSV, or an Anki package (with furigana in a reading field). Add &ldquo;include my review progress&rdquo; to make a backup. Imports treat the file as untrusted: sizes, counts and every field are checked.</li>
+</ul>
+<h2 id="recommended-next">Recommended next</h2>
+<p>The dashboard has been redesigned to match the anime pages, and it has a new <strong>Recommended next</strong> section. Words you don&rsquo;t have a card for are ranked by how common they are, how well you know their kanji, whether they show up in a series you study or in your sentence decks (especially as the <em>last</em> unknown word in a sentence), and how close they are to your JLPT level. Every recommendation says why, and adding one to your deck is a single click.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/11-a-big-week/dashboard-recommendations.png"  alt="The dashboard in dark mode with recommended words"  width="2160" height="1770" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The redesigned dashboard (in dark mode) with recommended words and the reasons behind them.
+    </figcaption>
+  
+</figure>
+<p>The tabs narrow it down to your anime, your sentences, or kanji you know. The kanji tab lists words made from kanji you already know and ranks them by how shaky those kanji still are, so it practises what you are still learning. The due histograms also stopped resizing the card when you drag the slider.</p>
+<h2 id="analytics-overview">Analytics overview</h2>
+<p>The Analytics page has a new Overview tab that pulls together kana, kanji, words and sentences: day streak, total reviews, retention, what is due now, a heatmap of the past year, the last 30 days, a forecast of upcoming reviews, per-deck maturity, how you answer, and what time of day you study. The old kana, kanji and words progress views are still there as tabs.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/11-a-big-week/analytics-overview.png"  alt="The analytics overview"  width="2160" height="3000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The analytics overview (with made-up demo data).
+    </figcaption>
+  
+</figure>
+<h2 id="dark-mode-settings-and-your-account">Dark mode, Settings and your account</h2>
+<ul>
+<li><strong>Dark mode.</strong> The whole app now has one, and the Word Study banner and white text got softened in dark mode.</li>
+<li><strong>Settings page.</strong> Theme (System, Light or Dark), your study settings and your account are now in one place at the bottom of the sidebar.</li>
+<li><strong>Delete your account.</strong> You can now delete your account and all your data from Settings (type DELETE to confirm).</li>
+<li><strong>Privacy policy and terms</strong> were rewritten to describe what Momiji actually does, ahead of Google&rsquo;s OAuth review. The login and setup pages were also themed to match the app.</li>
+</ul>
+<h2 id="anime-and-deck-pages">Anime and deck pages</h2>
+<ul>
+<li>The anime pages and the deck management page were redesigned, with the Momiji palette applied across the remaining pages.</li>
+<li>The anime word list now has numbered pages, and its &ldquo;In deck&rdquo; filter was fixed.</li>
+<li>The Vocabulary Due histogram shows each word once, and a card counts as due only after its review time has actually passed.</li>
+<li>The Anki export now includes your review history and last review time.</li>
+</ul>
+<h2 id="dictionary">Dictionary</h2>
+<ul>
+<li>Dictionary search is faster and handles words that could be either romaji or English.</li>
+<li>Search boxes no longer auto-capitalise or autocorrect on mobile, which mangled romaji and Japanese queries.</li>
+</ul>
+<h2 id="better-anime-word-counts">Better anime word counts</h2>
+<p>The pipeline that counts words in subtitles got more accurate this week:</p>
+<ul>
+<li>Character and place names are now found automatically (an AI sorts names from vocabulary in a few batched requests per series). The biggest error before was フリーレン being counted as &ldquo;free&rdquo; 299 times.</li>
+<li>Katakana that the tokenizer cut badly is split again into the fewest, most common dictionary words.</li>
+<li>Hand-made corrections can now skip a word and target part of a longer katakana word, and I fixed a shared list that was overriding the matcher on hundreds of rows.</li>
+<li>A run can now pick which series to process.</li>
+</ul>
+<h2 id="momiji-is-live-at-momijiapp">Momiji is live at momiji.app</h2>
+<ul>
+<li><strong>Production moved.</strong> Momiji now runs on my own servers, and momiji.app was cut over from AWS. The dev site at dev.momiji.app is a separate environment with its own login project.</li>
+<li><strong>Public site and app deploy separately.</strong> The landing page is prerendered with better SEO basics, and the landing screenshots were refreshed.</li>
+<li><strong>Monitoring.</strong> Both APIs expose metrics, and there are now dashboards, logs and alerts for dev and prod. The data pipelines have their own dashboard, with a &ldquo;how to read this&rdquo; guide.</li>
+<li><strong>Safer data pipelines.</strong> The dictionary pipelines are safe to run on a database with users, and there is a command to promote dev&rsquo;s reference data to prod.</li>
+</ul>
+<h2 id="smaller-things">Smaller things</h2>
+<ul>
+<li><strong>A new logo.</strong> Kaede, a flat Japanese maple leaf, replaces the old picture-style maple and emoji in the app, the landing page and the blog.</li>
+<li>The blog is now Momiji-branded at blog.momiji.app.</li>
+<li>The sidebar and help panels link to the Discord.</li>
+<li>Analytics consent banner and key events for the public site.</li>
+<li>Fixes: a fresh login is no longer reported as an expired session, and the user setup page no longer hangs.</li>
+<li>Terms now name Texas law, and the privacy policy says where Momiji is based.</li>
+<li>Dependencies were upgraded, including Node 24 LTS.</li>
+</ul>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<p>Sentence decks are built end to end, so the next step is using them a lot and seeing what is rough. I&rsquo;d like to hear what you think. Come say hi on the Discord (linked from the sidebar in the app).</p>
+
+  
+</div>
+
+<section class="flex flex-col gap-10">
+  
+</section>
+
+
+
+
+    </main><footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+  © 2026
+  <a class="footer-brand" href="https://momiji.app">Momiji</a>
+  <span class="block sm:inline sm:ml-2">Data-driven Japanese learning for faster fluency and better retention.</span>
+</div>
+
+    <ul class="flex gap-5">
+  
+  <li>
+    <a href="https://discord.gg/7BfKduAvCC" target="_blank" rel="noopener noreferrer">Discord</a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/SakuryoLearning" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </li>
+  
+</ul>
+
+  </div>
+</footer>
+</body>
+</html>

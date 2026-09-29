@@ -17,18 +17,12 @@
 
 
 
-<script
-  defer
-  src="https://www.googletagmanager.com/gtag/js?id=G-Q9C4WJE4N2"
-></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q9C4WJE4N2');
+<script type="module">
+  import { initAnalytics } from "\/js\/analytics.js";
+  initAnalytics({
+    gaId: "G-DB01CZXKWH",
+    privacyPolicyUrl: "https://momiji.app/privacy",
+  });
 </script>
 
 
@@ -45,7 +39,7 @@
 
 <a class="site-brand" href="https://blog.momiji.app/">
   
-  <img src="/img/favicon_hu_b42049087fd4525c.png" width="36" height="36" alt="" />
+  <img src="/img/favicon_hu_55ce9425326ae395.png" width="36" height="36" alt="" />
   
   <span class="site-brand-name">Momiji</span>
   <span class="site-brand-tag">blog</span>
@@ -165,6 +159,37 @@
   
     <article class="flex flex-col gap-1">
   <h1>
+    <a href="https://blog.momiji.app/posts/11-a-big-week/">Changelog: Sentence Decks, Recommendations, Analytics and Momiji Goes Live</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2026-09-28 00:00:00 &#43;0000 UTC" title='Mon, Sep 28, 2026, 12:00 AM UTC'>
+      28/09/2026
+    </time>
+  </span>
+
+  <div class="description">
+    
+      A week of changes: sentence decks, word recommendations, a real analytics page, dark mode, account deletion, and Momiji moving to its own servers at momiji.app.
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="https://blog.momiji.app/posts/11-a-big-week/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
     <a href="https://blog.momiji.app/posts/10-moving-too-quickly/">Defining and releasing a MVP</a>
   </h1>
   
@@ -275,37 +300,6 @@
 
   <div class="mt-2">
     <a class="read-more" href="https://blog.momiji.app/posts/7-a-new-look-kanji-flash-cards/">
-      Read more
-      <span class="w-4 h-4 stroke-2">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-</svg>
-
-      </span>
-    </a>
-  </div>
-</article>
-
-  
-    <article class="flex flex-col gap-1">
-  <h1>
-    <a href="https://blog.momiji.app/posts/6-a-simple-srs/">A Simple Centralized SRS</a>
-  </h1>
-  
-  <span class="date">
-    <time datetime="2025-03-24 15:41:25 &#43;0000 UTC" title='Mon, Mar 24, 2025, 3:41 PM UTC'>
-      24/03/2025
-    </time>
-  </span>
-
-  <div class="description">
-    
-      I have linked the dictionary data, user data, and an SRS to bring in personalized SRS study to Momiji
-    
-  </div>
-
-  <div class="mt-2">
-    <a class="read-more" href="https://blog.momiji.app/posts/6-a-simple-srs/">
       Read more
       <span class="w-4 h-4 stroke-2">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
