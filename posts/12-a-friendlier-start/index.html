@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Changelog: A Friendlier Start, Better Reviews and a Browser Extension</title>
+<meta
+  name="description"
+  content="A welcome tour and a Guide page, kana audio, reworked reviews that work on phones, kanji recommendations, pitch accent in the dictionary, a browser extension, a new landing page, and a lot of security work."
+/>
+<link rel="canonical" href="https://blog.momiji.app/posts/12-a-friendlier-start/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.png" />
+
+
+
+<script type="module">
+  import { initAnalytics } from "\/js\/analytics.js";
+  initAnalytics({
+    gaId: "G-DB01CZXKWH",
+    metaPixelId: "1638052804565347",
+    adsId: "AW-18482072700",
+    privacyPolicyUrl: "https://momiji.app/privacy",
+  });
+</script>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+
+<link rel="stylesheet" href="https://blog.momiji.app/css/app.min.af73202a3228d92c7f59aea5ca8fb133a7ccbcf364e9b97acc2a6c9cae3e56d6.css" integrity="sha256-r3MgKjIo2Sx/Wa6lyo+xM6fMvPNk6bl6zCpsnK4+VtY=" /></head>
+
+  <body>
+    <header class="site-bar">
+  <div class="site-bar-inner">
+    
+
+<a class="site-brand" href="https://blog.momiji.app/">
+  
+  <img src="/img/favicon_hu_55ce9425326ae395.png" width="36" height="36" alt="" />
+  
+  <span class="site-brand-name">Momiji</span>
+  <span class="site-brand-tag">blog</span>
+</a>
+
+    <nav class="site-nav">
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About
+      </a>
+    </li>
+    
+    <li>
+      <a href="/posts" class="">
+        Posts
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+
+    <div class="site-actions">
+      
+      <a class="app-button" href="https://momiji.app">Open the app</a>
+      
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  </div>
+</header>
+
+
+    <main id="content" class="w-full max-w-screen-md mx-auto px-4 pt-10 flex-1">
+
+
+
+
+<div class="flex flex-col gap-1">
+  <h1 class="text-2xl font-extrabold">
+    
+      Changelog: A Friendlier Start, Better Reviews and a Browser Extension
+      
+    </h1>
+  
+  
+    <h1 id="what-changed-in-momiji-since-the-last-post">What changed in Momiji since the last post</h1>
+<p>The last post was about sentence decks and getting Momiji onto its own servers. Once that was done I looked at Momiji the way a new person would see it, and it wasn&rsquo;t great. You logged in to an empty dashboard, kana was hidden behind a tab on the kanji page, and the sidebar used different names than the pages it linked to. So most of the last few days went into the first few minutes of using Momiji, and into making the reviews feel like one app instead of four.</p>
+<h2 id="highlights">Highlights</h2>
+<ul>
+<li><strong>A welcome tour and a Guide page</strong> for new accounts, and new users start with あいうえお already in their kana deck.</li>
+<li><strong>Kana says itself out loud</strong>, in a female or male voice.</li>
+<li><strong>Word, kanji and kana reviews were rebuilt</strong> to match the sentence review, and they finally work well on a phone.</li>
+<li><strong>Recommended kanji</strong> on the dashboard, next to the recommended words.</li>
+<li><strong>Pitch accent</strong> over every reading in the dictionary.</li>
+<li><strong>A Momiji browser extension</strong> with offline dictionary lookups.</li>
+<li><strong>A new landing page</strong>, and the open alpha warning is gone from the login page.</li>
+</ul>
+<h2 id="a-friendlier-start">A friendlier start</h2>
+<p>New accounts now land on a short welcome tour after their first login. It is three steps: hello, what&rsquo;s in Momiji (with anime first, since that is what Momiji is really for), and &ldquo;where are you starting from?&rdquo;, which points complete beginners at kana. You can skip it on any step, and existing accounts never see it.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/12-a-friendlier-start/welcome-tour.jpg"  alt="The second step of the welcome tour"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The welcome tour. Every part of Momiji gets one line, and Skip is always in the corner.
+    </figcaption>
+  
+</figure>
+<ul>
+<li><strong>A Guide page.</strong> Everything from the tour and more is now on its own page: where to start depending on how much Japanese you know, what every part of Momiji does, and how reviews work. There is a button to replay the tour, and the help panels on the review pages link to it.</li>
+<li><strong>Kana is easy to find.</strong> It used to be the second tab of the kanji page, and nothing linked to it. It now has its own page and sidebar entry, it is the first card in the dashboard&rsquo;s Jump in list, and if you have no cards yet the dashboard says &ldquo;New to Japanese? Start with kana&rdquo;.</li>
+<li><strong>New accounts start with あいうえお.</strong> The first row of hiragana is added when your account is made, so the Kana page has something to learn straight away. When you run out of kana to review, it offers the next row in learning order (plain hiragana, then dakuten, then the same for katakana, then combinations) with one click.</li>
+</ul>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/12-a-friendlier-start/kana-start.png"  alt="The Kana page offering the first row of hiragana"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      With nothing to review, the Kana page offers the next row to learn.
+    </figcaption>
+  
+</figure>
+<h2 id="a-sidebar-that-makes-sense">A sidebar that makes sense</h2>
+<p>The sidebar was a flat list of ten links whose names didn&rsquo;t match the dashboard, the guide or the page headings. It is now grouped into <strong>Review</strong> (Words, Kanji, Kana, Sentences), <strong>Explore</strong> (Dictionary, Anime) and <strong>Your progress</strong> (Stats, My cards), and the same names are used everywhere. Guide, Discord, a theme switch, Settings and Log out moved into an account menu at the bottom. The sidebar also remembers whether you collapsed it, and the streak no longer flashes 0 while it loads.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/12-a-friendlier-start/guide-sidebar.png"  alt="The Guide page with the new sidebar and the account menu open"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The Guide page, the regrouped sidebar, and the new account menu.
+    </figcaption>
+  
+</figure>
+<h2 id="kana-you-can-hear">Kana you can hear</h2>
+<p>Kana review now says each kana out loud when its answer shows. A Sound switch on the card turns it off, and a speaker button next to the reading plays it again. The clips were made once with VOICEVOX. The first voice I tried sounded pretty robotic, so you can now pick 春日部つむぎ (female, the default) or 青山龍星 (male) under Sound in Settings. Both voices are credited in Settings and on the credits page, as their terms ask.</p>
+<h2 id="reviews-rebuilt">Reviews, rebuilt</h2>
+<p>Words, kanji and kana reviews now share the same pieces as the sentence review: the due / new / done counts at the top, Show answer, then Again, Hard, Good or Easy with the interval each one gives you (space and keys 1 to 4 still work), a done screen that tells you when the next card is due, and every answer is timed.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/12-a-friendlier-start/word-review.png"  alt="A word review with the answer showing"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      A word card with the answer showing, including a sentence from your own decks.
+    </figcaption>
+  
+</figure>
+<ul>
+<li><strong>Words.</strong> You can show the reading before the answer (the よみ switch, and it remembers your choice). The answer has the JLPT level, numbered meanings with short parts of speech, other spellings, the word&rsquo;s kanji, and sentences from your sentence decks.</li>
+<li><strong>Kanji.</strong> Meaning first, with the readings as a tap-for-a-hint. The writing pad has Outline and Stroke numbers switches, and the drawing game now uses Momiji&rsquo;s colors and follows dark mode.</li>
+<li><strong>No more accidental flips.</strong> Clicking anywhere on the card used to show the answer, so missing a small switch gave the answer away, and there was no way back. Now only Show answer, space or Enter turns the card over, and Hide answer (or Esc) turns it back.</li>
+</ul>
+<h3 id="on-phones">On phones</h3>
+<p>On a phone the answer used to push the rating buttons below the screen. Now the rating bar sticks to the bottom of the screen with all four buttons in one row, and the back of the card replaces the front instead of stacking under it, so the whole card fits.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/12-a-friendlier-start/review-mobile.png"  alt="A word review on a phone"  width="420" height="728" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The same card on a phone. The rating bar stays at the bottom of the screen.
+    </figcaption>
+  
+</figure>
+<h2 id="recommended-kanji">Recommended kanji</h2>
+<p>Recommended next on the dashboard now has a <strong>Kanji</strong> view. It ranks the kanji you don&rsquo;t have a card for by how many words in your deck use them, how common they are, and how close their JLPT level is to yours. Like the word recommendations, each card says why it is there.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/12-a-friendlier-start/recommended-kanji.png"  alt="Recommended kanji on the dashboard in dark mode"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      Recommended kanji, picked from the words you&#39;re already learning.
+    </figcaption>
+  
+</figure>
+<p>The deck management page (now called <strong>My cards</strong>) also has a <strong>Kanji</strong> tab. It lists your kanji cards with their meanings, readings, JLPT level and next review, with filters, search, sorting, bulk removal and &ldquo;remove unstudied&rdquo;, the same as the Words tab.</p>
+<h2 id="pitch-accent-in-the-dictionary">Pitch accent in the dictionary</h2>
+<p>Every reading in the dictionary now shows its pitch accent as a line over the high morae, with a tick where the pitch drops. Hover it to see the pattern name (for example &ldquo;Nakadaka [2]&rdquo;) and any other ways the word is said. The data comes from Kanjium, matched on both the written form and the reading so homophones like 箸, 橋 and 端 stay apart, with UniDic filling in some of the gaps. That covers about 96% of common words.</p>
+<h2 id="the-dictionary-on-mobile">The dictionary on mobile</h2>
+<p>The dictionary page was restyled. Entry cards stack on small screens instead of squeezing into two columns, the kanji panel drops under the entry, and &ldquo;Show all N definitions&rdquo; is easier to see.</p>
+<h2 id="a-momiji-browser-extension">A Momiji browser extension</h2>
+<p>There is now a Momiji browser extension. It replaces my old prototype, which called the dictionary API for every single lookup.</p>
+<ul>
+<li><strong>Offline lookups.</strong> The whole dictionary (about 211,000 words and 12,600 kanji) ships with the extension, so lookups are instant and don&rsquo;t need the server.</li>
+<li><strong>Hover to look up.</strong> Hold Shift and point at any Japanese word on a page. It undoes inflections (食べなかった becomes 食べる) and skips furigana. It shows pitch accent too.</li>
+<li><strong>Add to your decks.</strong> Add a word or kanji to your decks from the popup, with your progress on each word shown on its button, or save the sentence around a word to a sentence deck.</li>
+<li><strong>A toolbar popup</strong> for searching in kana, kanji or romaji, with your recent lookups.</li>
+</ul>
+<h2 id="a-new-landing-page">A new landing page</h2>
+<p>The home page at momiji.app got a big redesign I&rsquo;m calling 紅葉嵐 (maple storm): falling maple leaves, a huge outlined 紅葉, a tilted dashboard screenshot, a dark features grid, and a &ldquo;how it works&rdquo; section on cream paper. It turns all the animation off if your system asks for reduced motion. I also took the open alpha warning off the login page.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/12-a-friendlier-start/landing.jpg"  alt="The new Momiji landing page"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The new landing page.
+    </figcaption>
+  
+</figure>
+<h2 id="security-and-behind-the-scenes">Security and behind the scenes</h2>
+<p>Now that real people are signing up, I spent a night on security:</p>
+<ul>
+<li><strong>Security headers.</strong> The app and the public site now send a Content Security Policy that forbids inline scripts, along with the other standard headers.</li>
+<li><strong>Cross-site writes are refused.</strong> The API only accepts changes coming from the app itself (or the browser extension).</li>
+<li><strong>Least privilege for the database.</strong> The APIs now connect as a login that can only read and write rows, instead of an all-powerful one.</li>
+<li><strong>Upgrades.</strong> The Java API is on Spring Boot 4.1, the Python API checks sessions with PyJWT, limits request sizes and runs as a non-root user, and the self-hosted CI runner no longer runs code from other people&rsquo;s pull requests.</li>
+<li><strong>Data pipelines.</strong> Airflow was upgraded to 3.3 and its database to Postgres 17, since both old versions were past end of life. I checked that every table came out identical before and after. The dictionary pipeline also went from about 4.5 minutes to under a minute, and fixing it turned up three old bugs: readings marked as kana-only were never flagged, every loanword was tagged as English (ciel is French), and a few entries were missing their JLPT level (鶏肉 is now N5).</li>
+<li><strong>More memory.</strong> The web, pipelines and monitoring servers got double the memory.</li>
+</ul>
+<h2 id="smaller-things">Smaller things</h2>
+<ul>
+<li>The privacy policy now covers the browser extension and the AI features, and the app has a credits page for its data sources.</li>
+<li>Dark mode kana readings are readable again.</li>
+<li>The big &ldquo;Words from Anime&rdquo; card on the landing page shows an episode screenshot.</li>
+</ul>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<p>Next I want to watch how new people get through the tour and their first kana, and fix whatever is rough. If you try Momiji, especially if you are just starting Japanese, I&rsquo;d love to hear how the first few minutes went. Come say hi on the Discord (it&rsquo;s in the account menu at the bottom of the sidebar now).</p>
+
+  
+</div>
+
+<section class="flex flex-col gap-10">
+  
+</section>
+
+
+
+
+    </main><footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+  © 2026
+  <a class="footer-brand" href="https://momiji.app">Momiji</a>
+  <span class="block sm:inline sm:ml-2">Data-driven Japanese learning for faster fluency and better retention.</span>
+</div>
+
+    <ul class="flex gap-5">
+  
+  <li>
+    <a href="https://discord.gg/7BfKduAvCC" target="_blank" rel="noopener noreferrer">Discord</a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/SakuryoLearning" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </li>
+  
+</ul>
+
+  </div>
+</footer>
+</body>
+</html>
