@@ -12,9 +12,16 @@
 			<copyright>{year}</copyright>
 		
 		
-			<lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://blog.momiji.app/tags/development/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Changelog: A Friendlier Start, Better Reviews and a Browser Extension</title>
+				<link>https://blog.momiji.app/posts/12-a-friendlier-start/</link>
+				<pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>https://blog.momiji.app/posts/12-a-friendlier-start/</guid>
+				<description>&lt;h1 id=&#34;what-changed-in-momiji-since-the-last-post&#34;&gt;What changed in Momiji since the last post&lt;/h1&gt;&#xA;&lt;p&gt;The last post was about sentence decks and getting Momiji onto its own servers. Once that was done I looked at Momiji the way a new person would see it, and it wasn&amp;rsquo;t great. You logged in to an empty dashboard, kana was hidden behind a tab on the kanji page, and the sidebar used different names than the pages it linked to. So most of the last few days went into the first few minutes of using Momiji, and into making the reviews feel like one app instead of four.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Changelog: Sentence Decks, Recommendations, Analytics and Momiji Goes Live</title>
 				<link>https://blog.momiji.app/posts/11-a-big-week/</link>
