@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Guest Mode on Momiji Blog</title>
+		<link>https://blog.momiji.app/tags/guest-mode/</link>
+		<description>Recent content in Guest Mode on Momiji Blog</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+			<copyright>{year}</copyright>
+		
+		
+			<lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://blog.momiji.app/tags/guest-mode/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Changelog: Grammar, Trying Momiji Without an Account, and Articles</title>
+				<link>https://blog.momiji.app/posts/13-grammar-and-trying-without-an-account/</link>
+				<pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>https://blog.momiji.app/posts/13-grammar-and-trying-without-an-account/</guid>
+				<description>&lt;h1 id=&#34;what-changed-in-momiji-since-the-last-post&#34;&gt;What changed in Momiji since the last post&lt;/h1&gt;&#xA;&lt;p&gt;The last post was about the first few minutes of using Momiji. Two things were still missing. You had to make an account before you could see anything, and Momiji had nothing for grammar. Words and kanji only get you so far: if you don&amp;rsquo;t know what ～てしまう or ～わけがない is doing, knowing every word in the sentence doesn&amp;rsquo;t help much. So this round was mostly grammar, plus letting people try Momiji before they sign up.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
