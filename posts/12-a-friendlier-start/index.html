@@ -8,7 +8,7 @@
 <title>Changelog: A Friendlier Start, Better Reviews and a Browser Extension</title>
 <meta
   name="description"
-  content="A welcome tour and a Guide page, kana audio, reworked reviews that work on phones, kanji recommendations, pitch accent in the dictionary, a browser extension, a new landing page, and a lot of security work."
+  content="A welcome tour and a Guide page, kana audio, reworked reviews that work on phones, kanji recommendations, pitch accent in the dictionary, a browser extension and a new landing page."
 />
 <link rel="canonical" href="https://blog.momiji.app/posts/12-a-friendlier-start/" />
 <link rel="robots" href="/robots.txt" />
@@ -319,14 +319,9 @@
     </figcaption>
   
 </figure>
-<h2 id="security-and-behind-the-scenes">Security and behind the scenes</h2>
-<p>Now that real people are signing up, I spent a night on security:</p>
+<h2 id="behind-the-scenes">Behind the scenes</h2>
 <ul>
-<li><strong>Security headers.</strong> The app and the public site now send a Content Security Policy that forbids inline scripts, along with the other standard headers.</li>
-<li><strong>Cross-site writes are refused.</strong> The API only accepts changes coming from the app itself (or the browser extension).</li>
-<li><strong>Least privilege for the database.</strong> The APIs now connect as a login that can only read and write rows, instead of an all-powerful one.</li>
-<li><strong>Upgrades.</strong> The Java API is on Spring Boot 4.1, the Python API checks sessions with PyJWT, limits request sizes and runs as a non-root user, and the self-hosted CI runner no longer runs code from other people&rsquo;s pull requests.</li>
-<li><strong>Data pipelines.</strong> Airflow was upgraded to 3.3 and its database to Postgres 17, since both old versions were past end of life. I checked that every table came out identical before and after. The dictionary pipeline also went from about 4.5 minutes to under a minute, and fixing it turned up three old bugs: readings marked as kana-only were never flagged, every loanword was tagged as English (ciel is French), and a few entries were missing their JLPT level (鶏肉 is now N5).</li>
+<li><strong>Data pipelines.</strong> The dictionary pipeline went from about 4.5 minutes to under a minute, and fixing it turned up three old bugs: readings marked as kana-only were never flagged, every loanword was tagged as English (ciel is French), and a few entries were missing their JLPT level (鶏肉 is now N5).</li>
 <li><strong>More memory.</strong> The web, pipelines and monitoring servers got double the memory.</li>
 </ul>
 <h2 id="smaller-things">Smaller things</h2>

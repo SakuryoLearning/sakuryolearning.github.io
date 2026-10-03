@@ -8,7 +8,7 @@
 <title>Changelog: Grammar, Trying Momiji Without an Account, and Articles</title>
 <meta
   name="description"
-  content="340 grammar points from N5 to N1 with furigana, grammar found in your own sentences, grammar cards, trying Momiji without an account, colour palettes, articles about learning Japanese, and better subtitle handling."
+  content="340 grammar points from N5 to N1 with furigana, grammar found in your own sentences, grammar cards, trying Momiji without an account, colour palettes, and articles about learning Japanese."
 />
 <link rel="canonical" href="https://blog.momiji.app/posts/13-grammar-and-trying-without-an-account/" />
 <link rel="robots" href="/robots.txt" />
@@ -234,7 +234,7 @@
     </figcaption>
   
 </figure>
-<p>Finding grammar automatically is harder than finding words, and a wrong match is worse than no match. So 275 of the 340 points have rules that find them, and each rule was checked by hand on random matches from about 55,000 anime subtitle lines and 249,000 Tatoeba sentences until it was right at least 95% of the time. The other points, like ことがある, can only be told apart by context, so they&rsquo;re lesson-only: they have pages and cards but aren&rsquo;t highlighted in sentences. I&rsquo;d rather miss one than teach you the wrong thing. Older sentences are re-checked in the background, so your existing decks get grammar too.</p>
+<p>Finding grammar automatically is harder than finding words, and a wrong match is worse than no match. So 275 of the 340 points have rules that find them, and each rule was checked by hand on random matches from about 55,000 lines of anime dialogue and 249,000 Tatoeba sentences until it was right at least 95% of the time. The other points, like ことがある, can only be told apart by context, so they&rsquo;re lesson-only: they have pages and cards but aren&rsquo;t highlighted in sentences. I&rsquo;d rather miss one than teach you the wrong thing. Older sentences are re-checked in the background, so your existing decks get grammar too.</p>
 <h2 id="grammar-cards-and-reviews">Grammar cards and reviews</h2>
 <p>You can study a point from its page, or a whole JLPT level at once. Each point gets two kinds of card: a <strong>recognition card</strong> (what does this mean?) and a <strong>cloze card</strong> (fill in the blank), and you can turn the cloze cards off in Settings. New points come in three a day by default.</p>
 <p>The important part: <strong>every review shows a different example</strong>. Your own sentences come first, then Momiji&rsquo;s examples, then Tatoeba&rsquo;s. Seeing a point in a sentence you saved from an anime you&rsquo;re watching is much better than seeing the same textbook sentence every time. Cloze cards are self-rated, and you can type your answer if you want it checked against the example.</p>
@@ -341,15 +341,8 @@
     </figcaption>
   
 </figure>
-<h2 id="subtitles-and-behind-the-scenes">Subtitles and behind the scenes</h2>
-<p>Most of this you&rsquo;ll never see, but it&rsquo;s what lets me add more anime:</p>
-<ul>
-<li><strong>More subtitle formats.</strong> The subtitle pipeline now reads <strong>.ass</strong> and <strong>WebVTT (.vtt)</strong> files, not just .srt. For Netflix-style .vtt it strips the furigana written in brackets after kanji (炭治郎(たんじろう)) so it isn&rsquo;t counted as words.</li>
-<li><strong>Subtitles split into words.</strong> Some subtitle files come with a space between every word, which confused the word splitter and produced fragments and missed words. Files like that now have those spaces removed first.</li>
-<li><strong>Naming episodes.</strong> A new script renames a show&rsquo;s subtitle files using the episode list on Wikipedia, reads episode numbers from messy release names like <code>[Leopard-Raws] Boku no Hero Academia - 01 (TBS 1280x720 x264 AAC)</code>, and numbers shows with several seasons straight through. That&rsquo;s for My Hero Academia and One Punch Man, which I&rsquo;m working on next.</li>
-<li><strong>Reviewing new words.</strong> After a run, the pipeline flags words it isn&rsquo;t sure about (is this a character&rsquo;s name?). I can now go through those flags one at a time and accept or decline each, and declined words don&rsquo;t get flagged again.</li>
-<li><strong>Deploys.</strong> The pipelines server now mirrors each pipeline&rsquo;s source files exactly, so a replaced subtitle file doesn&rsquo;t linger next to its replacement, and a deploy stops early if a file name isn&rsquo;t plain ASCII instead of failing halfway.</li>
-</ul>
+<h2 id="behind-the-scenes">Behind the scenes</h2>
+<p>You&rsquo;ll never see this, but it&rsquo;s what lets me add more anime: after a run, the pipeline flags words it isn&rsquo;t sure about (is this a character&rsquo;s name?). I can now go through those flags one at a time and accept or decline each, and declined words don&rsquo;t get flagged again.</p>
 <h2 id="whats-next">What&rsquo;s next</h2>
 <p>Next is watching how people use grammar, especially the cloze cards and the grammar chips in sentence decks, and getting My Hero Academia and One Punch Man into Momiji. If you study grammar in Momiji and a point is explained badly or is highlighted where it shouldn&rsquo;t be, please tell me on the Discord. Those reports are the fastest way to make the rules better.</p>
 
