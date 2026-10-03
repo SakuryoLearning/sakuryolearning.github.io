@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Changelog: Grammar, Trying Momiji Without an Account, and Articles</title>
+<meta
+  name="description"
+  content="340 grammar points from N5 to N1 with furigana, grammar found in your own sentences, grammar cards, trying Momiji without an account, colour palettes, articles about learning Japanese, and better subtitle handling."
+/>
+<link rel="canonical" href="https://blog.momiji.app/posts/13-grammar-and-trying-without-an-account/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.png" />
+
+
+
+<script type="module">
+  import { initAnalytics } from "\/js\/analytics.js";
+  initAnalytics({
+    gaId: "G-DB01CZXKWH",
+    metaPixelId: "1638052804565347",
+    adsId: "AW-18482072700",
+    privacyPolicyUrl: "https://momiji.app/privacy",
+  });
+</script>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+
+<link rel="stylesheet" href="https://blog.momiji.app/css/app.min.af73202a3228d92c7f59aea5ca8fb133a7ccbcf364e9b97acc2a6c9cae3e56d6.css" integrity="sha256-r3MgKjIo2Sx/Wa6lyo+xM6fMvPNk6bl6zCpsnK4+VtY=" /></head>
+
+  <body>
+    <header class="site-bar">
+  <div class="site-bar-inner">
+    
+
+<a class="site-brand" href="https://blog.momiji.app/">
+  
+  <img src="/img/favicon_hu_55ce9425326ae395.png" width="36" height="36" alt="" />
+  
+  <span class="site-brand-name">Momiji</span>
+  <span class="site-brand-tag">blog</span>
+</a>
+
+    <nav class="site-nav">
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About
+      </a>
+    </li>
+    
+    <li>
+      <a href="/posts" class="">
+        Posts
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+    <li>
+      <a href="https://momiji.app/articles" class="">
+        Learn Japanese
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+
+    <div class="site-actions">
+      
+      <a class="app-button" href="https://momiji.app">Open the app</a>
+      
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  </div>
+</header>
+
+
+    <main id="content" class="w-full max-w-screen-md mx-auto px-4 pt-10 flex-1">
+
+
+
+
+<div class="flex flex-col gap-1">
+  <h1 class="text-2xl font-extrabold">
+    
+      Changelog: Grammar, Trying Momiji Without an Account, and Articles
+      
+    </h1>
+  
+  
+    <h1 id="what-changed-in-momiji-since-the-last-post">What changed in Momiji since the last post</h1>
+<p>The last post was about the first few minutes of using Momiji. Two things were still missing. You had to make an account before you could see anything, and Momiji had nothing for grammar. Words and kanji only get you so far: if you don&rsquo;t know what ～てしまう or ～わけがない is doing, knowing every word in the sentence doesn&rsquo;t help much. So this round was mostly grammar, plus letting people try Momiji before they sign up.</p>
+<h2 id="highlights">Highlights</h2>
+<ul>
+<li><strong>Grammar</strong>: 340 points from N5 to N1, each with its own page, explanation and examples.</li>
+<li><strong>Grammar in your sentences.</strong> Momiji finds the grammar in your sentence decks and shows it under each sentence.</li>
+<li><strong>Grammar cards and reviews</strong>, with a new example each time and your own sentences first.</li>
+<li><strong>Grammar everywhere else</strong>: anime pages, recommendations, sentence reviews, Stats, My cards, Anki export and the browser extension.</li>
+<li><strong>Furigana and romaji</strong> on all the grammar Japanese, so beginners can read it.</li>
+<li><strong>Try Momiji without an account</strong>, and keep your progress if you sign up.</li>
+<li><strong>Colour palettes</strong>: Sumi and Kumo join Momiji, each in light and dark.</li>
+<li><strong>Articles about learning Japanese</strong> on momiji.app, separate from this dev blog.</li>
+</ul>
+<h2 id="grammar">Grammar</h2>
+<p>There is now a <strong>Grammar</strong> page in the sidebar. It lists 340 grammar points by JLPT level: 56 at N5, 73 at N4, 65 at N3, 69 at N2 and 77 at N1. You can search it in Japanese, romaji or English, and sort it by how often anime actually says each point, which I think is the most useful order if anime is why you&rsquo;re learning.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/13-grammar-and-trying-without-an-account/grammar-library.jpg"  alt="The grammar library sorted by how often anime says each point"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The grammar library, sorted by how often anime says each point. The furigana and romaji switches are on the right.
+    </figcaption>
+  
+</figure>
+<p>Each point has its own page with:</p>
+<ul>
+<li><strong>How to make it</strong>, as a short table: which form of a verb, adjective or noun it follows.</li>
+<li><strong>An explanation</strong> written for Momiji, and kept short. No padding.</li>
+<li><strong>Examples</strong>: Momiji&rsquo;s own, then real sentences from Tatoeba with a link to each.</li>
+<li><strong>Points not to confuse it with</strong>, and related points.</li>
+<li><strong>The anime that say it most.</strong></li>
+</ul>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/13-grammar-and-trying-without-an-account/grammar-point.jpg"  alt="The page for ～てしまう"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The page for ～てしまう: how to make it, then the explanation, with furigana over the kanji.
+    </figcaption>
+  
+</figure>
+<p>Every explanation and example is written specifically for Momiji, not copied from somewhere. Each level also got a second, independent review that caught real mistakes: wrong formation rows, missing common meanings, and examples that showed a different point than the one they were for. Those are fixed.</p>
+<h3 id="reading-help">Reading help</h3>
+<p>The first version of the grammar pages had a problem: even the N5 explanations had kanji with no readings, and titles like 何も・誰も had no reading anywhere. For someone who started Japanese last week, that page is useless. Now all of the grammar Japanese has <strong>furigana over the kanji</strong> by default, and a <strong>romaji switch</strong> puts romaji over everything for people still learning kana. Both switches are remembered. The readings are worked out automatically and then corrected where the usual readings are wrong for learners (私 is わたし, not わたくし, and 明日 is あした, not あす).</p>
+<h2 id="grammar-in-your-own-sentences">Grammar in your own sentences</h2>
+<p>This is the part I&rsquo;m most excited about. Momiji now finds grammar points in the sentences in your sentence decks. Under each sentence there&rsquo;s a row of grammar chips. Point at one and the part of the sentence it covers lights up, and click it for the meaning and a link to the point&rsquo;s page. Each deck also gets a <strong>Grammar</strong> tab, and every point page shows the sentences from your own decks that use it.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/13-grammar-and-trying-without-an-account/sentence-grammar.jpg"  alt="A sentence with its grammar chip highlighted"  width="1600" height="486" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      A sentence in a sentence deck. Pointing at the ～てしまう chip lights up its part of the sentence.
+    </figcaption>
+  
+</figure>
+<p>Finding grammar automatically is harder than finding words, and a wrong match is worse than no match. So 275 of the 340 points have rules that find them, and each rule was checked by hand on random matches from about 55,000 anime subtitle lines and 249,000 Tatoeba sentences until it was right at least 95% of the time. The other points, like ことがある, can only be told apart by context, so they&rsquo;re lesson-only: they have pages and cards but aren&rsquo;t highlighted in sentences. I&rsquo;d rather miss one than teach you the wrong thing. Older sentences are re-checked in the background, so your existing decks get grammar too.</p>
+<h2 id="grammar-cards-and-reviews">Grammar cards and reviews</h2>
+<p>You can study a point from its page, or a whole JLPT level at once. Each point gets two kinds of card: a <strong>recognition card</strong> (what does this mean?) and a <strong>cloze card</strong> (fill in the blank), and you can turn the cloze cards off in Settings. New points come in three a day by default.</p>
+<p>The important part: <strong>every review shows a different example</strong>. Your own sentences come first, then Momiji&rsquo;s examples, then Tatoeba&rsquo;s. Seeing a point in a sentence you saved from an anime you&rsquo;re watching is much better than seeing the same textbook sentence every time. Cloze cards are self-rated, and you can type your answer if you want it checked against the example.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/13-grammar-and-trying-without-an-account/grammar-review.jpg"  alt="A grammar review card with the answer showing"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      A recognition card with the answer showing. The example comes from a sentence deck, not a textbook.
+    </figcaption>
+  
+</figure>
+<p>Grammar cards need an account. Guests can still read every grammar page.</p>
+<h2 id="grammar-everywhere-else">Grammar everywhere else</h2>
+<ul>
+<li><strong>Anime pages.</strong> Series and episode pages list the grammar said in them, most-said first, with a &ldquo;Study all&rdquo; button.</li>
+<li><strong>Recommendations.</strong> The dashboard recommends grammar from your sentences, the shows you watch and your level, next to the recommended words and kanji. There&rsquo;s also a Grammar tile.</li>
+<li><strong>Sentence reviews.</strong> The back of a sentence card lists its grammar, and you can tap a point you didn&rsquo;t get, the same way you flag words.</li>
+<li><strong>Stats and My cards.</strong> Stats counts grammar reviews in your streak, retention and forecast, and has a Grammar tab showing each level&rsquo;s points by how well you know them. My cards has a Grammar tab with filters, search and removal, like the other tabs.</li>
+<li><strong>Anki.</strong> Grammar cards export to Anki with their progress.</li>
+<li><strong>The browser extension.</strong> When you look up an inflected word, the extension links the grammar behind it to its page on Momiji.</li>
+</ul>
+<h2 id="try-momiji-without-an-account">Try Momiji without an account</h2>
+<p>You can now try Momiji without signing up. &ldquo;Try it now — no sign-up&rdquo; is the main button on the landing page, and the login page has a &ldquo;Try Momiji without an account&rdquo; option. You go straight into the app with the welcome tour.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/13-grammar-and-trying-without-an-account/landing-try.jpg"  alt="The Momiji landing page with the Try it now button"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      Trying Momiji is now the main button on the landing page.
+    </figcaption>
+  
+</figure>
+<ul>
+<li><strong>What works:</strong> kana, kanji, vocabulary, the dictionary, anime decks and the grammar pages. Sentence decks, the AI features and imports need a free account.</li>
+<li><strong>Your progress comes with you.</strong> If you sign up later from the same browser, everything you did as a guest moves to your new account.</li>
+<li><strong>Limits.</strong> Guests can have up to 1,000 word and kanji cards, and the number of guest sessions per network is limited. Guests who don&rsquo;t come back for 30 days are deleted, and so are guests who never reviewed anything and haven&rsquo;t been back for two days.</li>
+</ul>
+<p>On the landing page, a strip after the features says what works without an account, and on phones a &ldquo;Try Momiji free&rdquo; bar stays at the bottom of the screen once you scroll past the top.</p>
+<h2 id="colour-palettes">Colour palettes</h2>
+<p>I missed this one in the last post. <strong>Settings → Appearance</strong> now has a palette picker. <strong>Momiji</strong> is the same as before, <strong>Sumi</strong> is warm ink greys, and <strong>Kumo</strong> is cool slate, each with a light and a dark mode. While doing this I also fixed the button text in Momiji&rsquo;s dark mode, which was an off-white that was hard to read on the orange buttons.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/13-grammar-and-trying-without-an-account/palettes.jpg"  alt="The Momiji dashboard in the Kumo palette, dark mode"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The dashboard in Kumo, dark mode, with the new Grammar tile next to the other decks.
+    </figcaption>
+  
+</figure>
+<h2 id="articles-about-learning-japanese">Articles about learning Japanese</h2>
+<p>momiji.app now has an <strong>Articles</strong> section with guides to learning Japanese, written for learners. Like the grammar pages, all the Japanese has furigana, and there&rsquo;s a romaji switch. The first two are <a href="https://momiji.app/articles/hiragana-katakana-kanji">Hiragana, Katakana and Kanji Explained</a> and <a href="https://momiji.app/articles/how-to-type-in-japanese">How to Type in Japanese on Any Computer or Phone</a>. Being able to type Japanese makes a huge difference once you&rsquo;re past the first few weeks.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/13-grammar-and-trying-without-an-account/articles.jpg"  alt="The Articles page on momiji.app"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The new Articles section.
+    </figcaption>
+  
+</figure>
+<p>From now on the two are separate: <strong>articles</strong> on momiji.app are for learning Japanese, and this <strong>dev blog</strong> is for what&rsquo;s changing in Momiji. The landing page&rsquo;s header, footer and home page link to both.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/13-grammar-and-trying-without-an-account/article-typing.jpg"  alt="The typing article&#39;s table of keys, with furigana"  width="1600" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      Part of the typing article. Every bit of Japanese has furigana, and romaji is one switch away.
+    </figcaption>
+  
+</figure>
+<h2 id="subtitles-and-behind-the-scenes">Subtitles and behind the scenes</h2>
+<p>Most of this you&rsquo;ll never see, but it&rsquo;s what lets me add more anime:</p>
+<ul>
+<li><strong>More subtitle formats.</strong> The subtitle pipeline now reads <strong>.ass</strong> and <strong>WebVTT (.vtt)</strong> files, not just .srt. For Netflix-style .vtt it strips the furigana written in brackets after kanji (炭治郎(たんじろう)) so it isn&rsquo;t counted as words.</li>
+<li><strong>Subtitles split into words.</strong> Some subtitle files come with a space between every word, which confused the word splitter and produced fragments and missed words. Files like that now have those spaces removed first.</li>
+<li><strong>Naming episodes.</strong> A new script renames a show&rsquo;s subtitle files using the episode list on Wikipedia, reads episode numbers from messy release names like <code>[Leopard-Raws] Boku no Hero Academia - 01 (TBS 1280x720 x264 AAC)</code>, and numbers shows with several seasons straight through. That&rsquo;s for My Hero Academia and One Punch Man, which I&rsquo;m working on next.</li>
+<li><strong>Reviewing new words.</strong> After a run, the pipeline flags words it isn&rsquo;t sure about (is this a character&rsquo;s name?). I can now go through those flags one at a time and accept or decline each, and declined words don&rsquo;t get flagged again.</li>
+<li><strong>Deploys.</strong> The pipelines server now mirrors each pipeline&rsquo;s source files exactly, so a replaced subtitle file doesn&rsquo;t linger next to its replacement, and a deploy stops early if a file name isn&rsquo;t plain ASCII instead of failing halfway.</li>
+</ul>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<p>Next is watching how people use grammar, especially the cloze cards and the grammar chips in sentence decks, and getting My Hero Academia and One Punch Man into Momiji. If you study grammar in Momiji and a point is explained badly or is highlighted where it shouldn&rsquo;t be, please tell me on the Discord. Those reports are the fastest way to make the rules better.</p>
+
+  
+</div>
+
+<section class="flex flex-col gap-10">
+  
+</section>
+
+
+
+
+    </main><footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+  © 2026
+  <a class="footer-brand" href="https://momiji.app">Momiji</a>
+  <span class="block sm:inline sm:ml-2">Data-driven Japanese learning for faster fluency and better retention.</span>
+</div>
+
+    <ul class="flex gap-5">
+  
+  <li>
+    <a href="https://discord.gg/7BfKduAvCC" target="_blank" rel="noopener noreferrer">Discord</a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/SakuryoLearning" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </li>
+  
+</ul>
+
+  </div>
+</footer>
+</body>
+</html>
