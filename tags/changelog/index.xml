@@ -12,9 +12,16 @@
 			<copyright>{year}</copyright>
 		
 		
-			<lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sun, 04 Oct 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://blog.momiji.app/tags/changelog/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Changelog: Sentences for You, Scanning Pages, and Sharing Your Progress</title>
+				<link>https://blog.momiji.app/posts/14-sentences-for-you-scanning-and-sharing/</link>
+				<pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>https://blog.momiji.app/posts/14-sentences-for-you-scanning-and-sharing/</guid>
+				<description>&lt;h1 id=&#34;what-changed-in-momiji-since-the-last-post&#34;&gt;What changed in Momiji since the last post&lt;/h1&gt;&#xA;&lt;p&gt;The last post was only two days ago, but a lot has happened since. That post was about grammar. This round is mostly about &lt;strong&gt;sentences&lt;/strong&gt;: finding good ones to learn from, and getting them out of the books and manga you already have. I&amp;rsquo;ve also changed how Momiji describes itself. It started as &amp;ldquo;learn Japanese from anime&amp;rdquo;, but what I actually want is for you to learn from whatever you love, and that could be a novel, a manga, a game or a show. Anime is still a big part of Momiji, but it isn&amp;rsquo;t the only way in anymore.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Changelog: Grammar, Trying Momiji Without an Account, and Articles</title>
 				<link>https://blog.momiji.app/posts/13-grammar-and-trying-without-an-account/</link>
