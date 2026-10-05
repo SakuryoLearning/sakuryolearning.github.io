@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Offline on Momiji Blog</title>
+		<link>https://blog.momiji.app/tags/offline/</link>
+		<description>Recent content in Offline on Momiji Blog</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+			<copyright>{year}</copyright>
+		
+		
+			<lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://blog.momiji.app/tags/offline/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Changelog: Reviewing Offline, and Reviews That Don&#39;t Wait</title>
+				<link>https://blog.momiji.app/posts/15-review-anywhere/</link>
+				<pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>https://blog.momiji.app/posts/15-review-anywhere/</guid>
+				<description>&lt;h1 id=&#34;what-changed-in-momiji-since-the-last-post&#34;&gt;What changed in Momiji since the last post&lt;/h1&gt;&#xA;&lt;p&gt;The last post was yesterday, so this one is short, but it&amp;rsquo;s about something I&amp;rsquo;ve wanted for a long time: &lt;strong&gt;reviewing anywhere&lt;/strong&gt;. On a train, on a plane, in a basement café with no signal. Your reviews shouldn&amp;rsquo;t stop because your connection did. While I was at it, I made reviews faster for everyone, especially if you live far away from the server.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

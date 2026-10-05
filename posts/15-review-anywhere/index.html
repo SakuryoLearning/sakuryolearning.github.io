@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Changelog: Reviewing Offline, and Reviews That Don&#39;t Wait</title>
+<meta
+  name="description"
+  content="The next card shows the moment you answer, every deck can be reviewed with no connection and syncs when you&#39;re back, answers from two devices get merged, and Momiji can be installed as an app."
+/>
+<link rel="canonical" href="https://blog.momiji.app/posts/15-review-anywhere/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.png" />
+
+
+
+<script type="module">
+  import { initAnalytics } from "\/js\/analytics.js";
+  initAnalytics({
+    gaId: "G-DB01CZXKWH",
+    metaPixelId: "1638052804565347",
+    adsId: "AW-18482072700",
+    privacyPolicyUrl: "https://momiji.app/privacy",
+  });
+</script>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+
+<link rel="stylesheet" href="https://blog.momiji.app/css/app.min.af73202a3228d92c7f59aea5ca8fb133a7ccbcf364e9b97acc2a6c9cae3e56d6.css" integrity="sha256-r3MgKjIo2Sx/Wa6lyo+xM6fMvPNk6bl6zCpsnK4+VtY=" /></head>
+
+  <body>
+    <header class="site-bar">
+  <div class="site-bar-inner">
+    
+
+<a class="site-brand" href="https://blog.momiji.app/">
+  
+  <img src="/img/favicon_hu_55ce9425326ae395.png" width="36" height="36" alt="" />
+  
+  <span class="site-brand-name">Momiji</span>
+  <span class="site-brand-tag">blog</span>
+</a>
+
+    <nav class="site-nav">
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About
+      </a>
+    </li>
+    
+    <li>
+      <a href="/posts" class="">
+        Posts
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+    <li>
+      <a href="https://momiji.app/articles" class="">
+        Learn Japanese
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+
+    <div class="site-actions">
+      
+      <a class="app-button" href="https://momiji.app">Open the app</a>
+      
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  </div>
+</header>
+
+
+    <main id="content" class="w-full max-w-screen-md mx-auto px-4 pt-10 flex-1">
+
+
+
+
+<div class="flex flex-col gap-1">
+  <h1 class="text-2xl font-extrabold">
+    
+      Changelog: Reviewing Offline, and Reviews That Don&#39;t Wait
+      
+    </h1>
+  
+  
+    <h1 id="what-changed-in-momiji-since-the-last-post">What changed in Momiji since the last post</h1>
+<p>The last post was yesterday, so this one is short, but it&rsquo;s about something I&rsquo;ve wanted for a long time: <strong>reviewing anywhere</strong>. On a train, on a plane, in a basement café with no signal. Your reviews shouldn&rsquo;t stop because your connection did. While I was at it, I made reviews faster for everyone, especially if you live far away from the server.</p>
+<h2 id="highlights">Highlights</h2>
+<ul>
+<li><strong>Reviews don&rsquo;t wait anymore.</strong> The next card shows up as soon as you answer, and your answers save in the background.</li>
+<li><strong>Review without a connection</strong>, for every deck: words, kanji, kana, grammar and sentences. Your answers sync when you&rsquo;re back online.</li>
+<li><strong>Momiji keeps your decks ready by itself</strong>, so you don&rsquo;t have to remember to download anything before you lose signal.</li>
+<li><strong>The rest of the app says &ldquo;you&rsquo;re offline&rdquo;</strong> instead of showing errors.</li>
+<li><strong>Answers from two devices get merged</strong>, and you only have to choose when they really can&rsquo;t be.</li>
+<li><strong>Momiji can be installed</strong> on your phone or computer like an app.</li>
+</ul>
+<h2 id="reviews-dont-wait-anymore">Reviews don&rsquo;t wait anymore</h2>
+<p>Momiji runs on one server. Before, every card waited on three trips to it in a row: get the next card, get its dictionary details, then save your answer. If you&rsquo;re close to the server you barely noticed, but from the other side of the world every card had a pause before it showed.</p>
+<p>Now Momiji loads a batch of your due cards at once and fetches the details for the next few ahead of time. When you answer, the next card is already there. In my testing it shows up in about 15 milliseconds. Your answers are saved in the background in the order you gave them, and if one fails because the connection dropped, it&rsquo;s tried again until it goes through.</p>
+<p>If you close the tab or put your phone away mid-review, any answers that haven&rsquo;t been saved yet are sent right away, so you don&rsquo;t lose them. This works for words, kanji, kana, grammar and sentences.</p>
+<h2 id="reviewing-without-a-connection">Reviewing without a connection</h2>
+<p>The first time you open a review page, Momiji asks whether to keep your reviews ready offline on that device.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/15-review-anywhere/keep-ready.jpg"  alt="The Words review page with a prompt above the card asking whether to keep reviews ready offline, with Keep them ready and Not now buttons"  width="1800" height="1125" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      Asked once per device. Say yes and Momiji keeps every deck downloaded for you.
+    </figcaption>
+  
+</figure>
+<p>If you say yes, Momiji downloads the cards you have due in the next week for every deck, plus a week of new grammar points and sentences, and keeps them up to date. It refreshes them every so often while the app is open, and whenever something changes, like adding words on another device. I made it automatic because nobody knows ahead of time when they&rsquo;ll lose signal. If it only worked when you remembered to press a download button, it would never be there when you need it.</p>
+<p>Then, with no connection, you review like normal. Momiji schedules each card on your device with the same FSRS algorithm the server uses. I ported it over and checked it against the server&rsquo;s version on 480 answers, and every one came out the same, so the intervals on the buttons are the ones you&rsquo;d get online. The panel above the card shows how many answers are waiting to sync.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/15-review-anywhere/review-offline.jpg"  alt="Reviewing 学校 with no connection. The sidebar says Offline, Downloaded reviews still work, and the panel says 3 answers to sync"  width="1800" height="1125" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      Reviewing offline. The answers wait on the device and sync on their own when the connection comes back.
+    </figcaption>
+  
+</figure>
+<p>When you&rsquo;re back online, your answers sync in the background. The server counts each one at the time you actually gave it, so your streak, your stats and your progress page all come out the same as if you&rsquo;d been online the whole time. You can even open Momiji with no connection at all, and it lets you in to review what you&rsquo;ve downloaded.</p>
+<p>If you&rsquo;d rather not keep reviews on a device, for example one other people use, you can turn it off under <strong>Settings → Offline</strong>. Logging out also clears everything downloaded, after syncing what it can.</p>
+<h2 id="the-rest-of-the-app-while-youre-offline">The rest of the app while you&rsquo;re offline</h2>
+<p>Some things really do need a connection: the dictionary, stats, anime, adding new words. Before, those pages just showed errors like &ldquo;Failed to fetch&rdquo; when you were offline, and some showed made-up zeros like a 0-day streak. Now they say you&rsquo;re offline and point you to the decks you can review on that device. The streak card in the sidebar changes to <strong>Offline · Downloaded reviews still work</strong>. Once you&rsquo;re back online, each page loads by itself.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/15-review-anywhere/offline-home.jpg"  alt="The home page with no connection: You&#39;re offline, with buttons for the Grammar, Kana and Words decks downloaded on this device"  width="1800" height="1125" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The home page with no connection. It links to the decks you can review on this device.
+    </figcaption>
+  
+</figure>
+<h2 id="reviewing-on-two-devices">Reviewing on two devices</h2>
+<p>Say you review 学校 on your phone on the train with no signal, and then review it again on your laptop before your phone has synced. Now there are two answers for the same card, and the server got them in the wrong order.</p>
+<p>Most of the time Momiji can just merge them. It replays the card&rsquo;s review history with your offline answer put back where it belongs in time, so both reviews count, in the order you actually did them. You won&rsquo;t even notice it happened.</p>
+<p>Sometimes the history doesn&rsquo;t match up, for example on a card whose progress was imported. Then Momiji doesn&rsquo;t guess. It shows you both answers and lets you choose: keep the other device&rsquo;s, or count yours too.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/15-review-anywhere/clash.jpg"  alt="The Answers that clashed dialog showing 学校 answered Hard here and Good on another device, with buttons Keep the other device&#39;s and Count mine too"  width="1800" height="1125" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      When two answers can&#39;t be merged, you choose which ones count.
+    </figcaption>
+  
+</figure>
+<h2 id="installing-momiji">Installing Momiji</h2>
+<p>You can now install Momiji. On a phone, use <strong>Add to Home Screen</strong>. On a computer, use the install button in your browser&rsquo;s address bar or menu. It opens in its own window without the browser around it. If you open it that way, keeping your reviews ready offline is turned on without asking, since that&rsquo;s most of the reason to install it.</p>
+<p>Installing also helps your downloads stick around. Browsers can clear a website&rsquo;s saved data when space runs low, and Safari does it after about a week of not visiting a site. Momiji asks the browser to keep its data, and if the browser says no, Settings tells you and suggests installing.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/15-review-anywhere/settings-offline.jpg"  alt="The Offline section of Settings with Keep my reviews ready offline on this device checked, and a note suggesting installing Momiji"  width="1160" height="420" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      Settings → Offline shows what&#39;s ready and whether your browser might clear it.
+    </figcaption>
+  
+</figure>
+<h2 id="smaller-things">Smaller things</h2>
+<ul>
+<li><strong>The landing page is lighter on phones.</strong> Its animations were making some phones sluggish, so on phones and tablets there are fewer falling leaves and no blur effects. It looks almost the same and scrolls much smoother.</li>
+<li><strong>This blog lost its styling</strong> for a little while after the last post. That&rsquo;s fixed.</li>
+</ul>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<p>Offline review is new, and losing someone&rsquo;s answers would be the worst thing it could do, so like Sentences for you, I&rsquo;m turning it on for a few people at a time first. If you review on the go, or you&rsquo;re far away from the server and want to try it, ask on the Discord. Once I&rsquo;ve seen it hold up, it&rsquo;ll be on for everyone.</p>
+
+  
+</div>
+
+<section class="flex flex-col gap-10">
+  
+</section>
+
+
+
+
+    </main><footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+  © 2026
+  <a class="footer-brand" href="https://momiji.app">Momiji</a>
+  <span class="block sm:inline sm:ml-2">Data-driven Japanese learning for faster fluency and better retention.</span>
+</div>
+
+    <ul class="flex gap-5">
+  
+  <li>
+    <a href="https://discord.gg/7BfKduAvCC" target="_blank" rel="noopener noreferrer">Discord</a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/SakuryoLearning" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </li>
+  
+  <li>
+    <a href="https://www.instagram.com/momijijapaneselearning/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </li>
+  
+</ul>
+
+  </div>
+</footer>
+</body>
+</html>
