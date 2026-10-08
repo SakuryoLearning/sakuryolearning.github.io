@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Changelog: A New Look, a Better First Five Minutes, and Offline for Everyone</title>
+<meta
+  name="description"
+  content="The dashboard, review cards, stats and anime pages are redesigned, the welcome tour starts from what you can read, offline review is on for every account, and a pile of smaller fixes."
+/>
+<link rel="canonical" href="https://blog.momiji.app/posts/16-a-new-look/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.png" />
+
+
+
+<script type="module">
+  import { initAnalytics } from "\/js\/analytics.js";
+  initAnalytics({
+    gaId: "G-DB01CZXKWH",
+    metaPixelId: "1638052804565347",
+    adsId: "AW-18482072700",
+    uetId: "187278995",
+    privacyPolicyUrl: "https://momiji.app/privacy",
+  });
+</script>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+
+<link rel="stylesheet" href="https://blog.momiji.app/css/app.min.af73202a3228d92c7f59aea5ca8fb133a7ccbcf364e9b97acc2a6c9cae3e56d6.css" integrity="sha256-r3MgKjIo2Sx/Wa6lyo+xM6fMvPNk6bl6zCpsnK4+VtY=" /></head>
+
+  <body>
+    <header class="site-bar">
+  <div class="site-bar-inner">
+    
+
+<a class="site-brand" href="https://blog.momiji.app/">
+  
+  <img src="/img/favicon_hu_55ce9425326ae395.png" width="36" height="36" alt="" />
+  
+  <span class="site-brand-name">Momiji</span>
+  <span class="site-brand-tag">blog</span>
+</a>
+
+    <nav class="site-nav">
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About
+      </a>
+    </li>
+    
+    <li>
+      <a href="/posts" class="">
+        Posts
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+    <li>
+      <a href="https://momiji.app/articles" class="">
+        Learn Japanese
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+
+    <div class="site-actions">
+      
+      <a class="app-button" href="https://momiji.app">Open the app</a>
+      
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  </div>
+</header>
+
+
+    <main id="content" class="w-full max-w-screen-md mx-auto px-4 pt-10 flex-1">
+
+
+
+
+<div class="flex flex-col gap-1">
+  <h1 class="text-2xl font-extrabold">
+    
+      Changelog: A New Look, a Better First Five Minutes, and Offline for Everyone
+      
+    </h1>
+  
+  
+    <h1 id="what-changed-in-momiji-since-the-last-post">What changed in Momiji since the last post</h1>
+<p>The last post was only three days ago, but this round touched almost every page in the app, so it might look like a different app the next time you open it.</p>
+<p>Most of it is about how Momiji looks. For a long time the app was a grid of cards with gradients on everything, and every page looked like every other page. I didn&rsquo;t love it, and I kept putting off fixing it because it isn&rsquo;t as fun as building new features. This week I finally sat down and did it. I made mockups for each page, picked the ones I liked, threw one away the same day I shipped it (more on that below), and rebuilt the dashboard, the review pages, the stats page and the anime pages.</p>
+<p>The other big thing is the first five minutes. If someone signs up and can&rsquo;t read a single kana, Momiji should still make sense to them.</p>
+<h2 id="highlights">Highlights</h2>
+<ul>
+<li><strong>A new dashboard</strong> that reads top to bottom like a page instead of a grid of cards.</li>
+<li><strong>New review cards</strong>: one centred card, bigger Japanese, and a better &ldquo;you&rsquo;re done&rdquo; screen.</li>
+<li><strong>The stats page is one long report</strong> instead of tabs of cards. Shared progress pages and the community page match it.</li>
+<li><strong>The anime pages are reports too</strong>: how much of a show is in your deck, which episode is next, and its words and grammar on one page.</li>
+<li><strong>A new welcome tour</strong> that asks which Japanese you can read and builds a plan from that. Complete beginners get taught あ before being tested on it.</li>
+<li><strong>Offline review is on for every account</strong>, not just the few people testing it.</li>
+<li><strong>Lots of smaller things</strong>: a week strip in the sidebar, flatter buttons, an easier guide, a more honest landing page and some grammar fixes.</li>
+</ul>
+<h2 id="the-dashboard-take-two">The dashboard (take two)</h2>
+<p>So&hellip; I actually redesigned the dashboard twice this week. The first version shipped, and once I looked at it on the real app I didn&rsquo;t like it. It was the same cards-everywhere look with nicer cards. I reverted it the same afternoon and started over.</p>
+<p>The one that stuck reads like a page. Each part is named in Japanese down the left margin: 今日 (today), 一週間 (the week), 次に (next) and 他に (everything else). At the top it just tells you how many cards are ready, gives you one button into the first deck that has cards, and shows each deck as a column with what&rsquo;s ready now, what&rsquo;s coming later today and how big it is.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/16-a-new-look/dashboard.jpg"  alt="The new dashboard: 77 cards are ready, a Review 42 words button, a column for each deck, and the week ahead underneath"  width="1440" height="900" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The new dashboard, with demo numbers. Today at the top, then the week ahead.
+    </figcaption>
+  
+</figure>
+<p>Recommendations are still there, as one top pick and a short list. Sentence recommendations are off the dashboard for now, until their data is better, and recommended words no longer show romaji.</p>
+<h2 id="the-review-cards">The review cards</h2>
+<p>Kana, words, kanji, sentences and grammar review all got the same new card. It&rsquo;s one centred card with the Japanese big in the middle. Switches like furigana are written out as text (&ldquo;Reading first <strong>off</strong>&rdquo;) instead of little toggles. The answer starts with the meaning, then the details go in labelled rows underneath: meanings, the kanji in the word, and the sentences you have it in.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/16-a-new-look/review-card.jpg"  alt="A word review card for 紅葉 showing the reading こうよう, the meaning autumn colours, its kanji and two example sentences, with the Again, Hard, Good and Easy buttons below"  width="1440" height="1000" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      A word card with its answer showing. The rating buttons say when each one brings the card back.
+    </figcaption>
+  
+</figure>
+<p>The rating buttons are softer and show when each one brings the card back. On a computer the keys are listed under them, and on a phone they&rsquo;re still stuck to the bottom of the screen. I also took off the small label that sat in the corner of every card (&ldquo;New word&rdquo;, &ldquo;Fill in the blank&rdquo; and so on). The page title already says what you&rsquo;re reviewing, and the hint under the prompt says what to do, so it was just noise.</p>
+<p>Word answers don&rsquo;t show romaji anymore. The kana reading is still there above the word.</p>
+<p>When you finish, you get お疲れ様でした (otsukaresama deshita, &ldquo;nice work&rdquo;), how many you did, and the other decks that still have cards today, so you can keep going if you want.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/16-a-new-look/review-done.jpg"  alt="The done screen: お疲れ様でした, 4 words reviewed, and a Still ready today list with 17 kanji, 12 sentences and 6 grammar points"  width="1440" height="900" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The done screen points you to whatever else is still waiting today.
+    </figcaption>
+  
+</figure>
+<h2 id="the-stats-page">The stats page</h2>
+<p>I like data, and that was literally the first sentence of this blog. But the old stats page was tabs full of cards, and it was hard to see the whole picture. Now it&rsquo;s one long report, top to bottom, with the same Japanese margin as the dashboard:</p>
+<ul>
+<li><strong>記録 (record)</strong>: your streak as the headline, with total reviews, retention, what&rsquo;s due, cards and days studied under it.</li>
+<li><strong>習得 (what you know)</strong>: hiragana and katakana as grids, the kanji for each school grade as a grid, and words and grammar as a column per JLPT level.</li>
+<li><strong>一年 (the year)</strong>: the year heatmap.</li>
+<li><strong>毎日 (every day)</strong>: reviews over the last 30 days and what&rsquo;s due over the next 14 in one chart, with a line at today.</li>
+<li><strong>記憶 (memory)</strong>: a row per deck with retention, how you answer and what&rsquo;s due.</li>
+<li><strong>時間 (time)</strong>: what time of day you review, with your busiest hour marked.</li>
+</ul>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/16-a-new-look/stats.jpg"  alt="The stats page headline, 31 days in a row, with five figures under it and the hiragana and katakana grids shaded green"  width="1440" height="1100" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The top of the new stats page, with demo numbers.
+    </figcaption>
+  
+</figure>
+<p>Every square and bar is now one green that gets darker the longer you&rsquo;ll remember it. Before, there were six colours that didn&rsquo;t have anything to do with each other, and you had to check the legend every time. Your shared progress page and the community page got the same look, so they all feel like one app now.</p>
+<h2 id="the-anime-pages">The anime pages</h2>
+<p>The anime library, series and episode pages were cards and tabs too. Now a series page opens with how much of the show is in your deck, which episodes you&rsquo;ve fully covered, and which episode is next and how many of its words you haven&rsquo;t added yet.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/16-a-new-look/anime-series.jpg"  alt="The Frieren series page: 38% of its words are in your deck, episodes 1 to 4 fully covered, episode 5 up next, and the episode list"  width="1440" height="1250" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      A series page. Episode 5 is marked Up next.
+    </figcaption>
+  
+</figure>
+<p><strong>Add all words</strong> still adds them most said first. The episodes, the most said words and the grammar the show uses are all on one page now instead of behind tabs. The progress colours are the same greens as the stats page, so a word that&rsquo;s dark green means the same thing everywhere.</p>
+<h2 id="the-welcome-tour">The welcome tour</h2>
+<p>The old welcome tour was basically a list of features. It still led with anime, didn&rsquo;t mention grammar or scanning, and if you said &ldquo;I&rsquo;m already studying&rdquo; it sent you to the sentences page&hellip; which guests can&rsquo;t use. So the first thing a new guest saw after the tour was a wall asking them to make an account. Not great.</p>
+<p>The new tour has four steps: hello, what can you read, your first review, and where to start. The second step shows you three real lines of Japanese, from simple hiragana to harder kanji, and asks you to pick the hardest one you can read. You don&rsquo;t need to know what it means.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/16-a-new-look/welcome-level.jpg"  alt="Which of these can you read? Three lines of Japanese labelled Hiragana, Everyday kanji and Harder kanji, plus None of these yet"  width="1280" height="860" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The tour asks what you can read instead of asking you to rate yourself.
+    </figcaption>
+  
+</figure>
+<p>Then you do one real review on the same card the app uses, with the real intervals a new card gets. Nothing is saved, it&rsquo;s just so the first review you ever do isn&rsquo;t on your real deck. After you show the answer, a line under the buttons explains what Again, Hard, Good and Easy do.</p>
+<p>If you picked <strong>None of these yet</strong>, Momiji used to show you あ and ask how it sounds&hellip; without ever teaching it to you. Now it teaches あ first, with a <strong>Listen</strong> button, and only tests you when you press <strong>Got it, test me</strong>.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/16-a-new-look/welcome-lesson.jpg"  alt="Your first kana: あ, said like the a in father, with a Listen button and a Got it, test me button"  width="1280" height="860" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      Complete beginners learn あ before they&#39;re asked about it.
+    </figcaption>
+  
+</figure>
+<p>The last step is three numbered steps for your level with one main button. For a complete beginner that&rsquo;s kana, then the most common N5 words, then picking a show. If you&rsquo;re a guest, anything that needs an account goes last and says so, and your first step is never one you can&rsquo;t use.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/16-a-new-look/welcome-plan.jpg"  alt="Where to start: 1 Learn your first kana, 2 Add the most common N5 words, 3 Pick a show you love"  width="1280" height="860" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The plan for someone starting from zero.
+    </figcaption>
+  
+</figure>
+<p>Momiji remembers the level you picked, and the <strong>Guide</strong> marks it as your starting point. The guide also moved into the sidebar under Explore. On phones its sections fold up so it isn&rsquo;t a giant wall of text, and its Japanese follows the same furigana and romaji switches as the rest of the app.</p>
+<h2 id="offline-review-for-everyone">Offline review for everyone</h2>
+<p>In the last post I said offline review would go to a few people at a time first. If you have an account, the first time you open a review page Momiji asks whether to keep your reviews ready offline on that device. Guests can&rsquo;t use it yet.</p>
+<p>I also fixed the offline panel above the card. Online, it used to pop up &ldquo;1 answer to sync&rdquo; after every answer and then disappear, which made the card jump up and down. Now it only shows up when answers are actually waiting, like when you&rsquo;re offline.</p>
+<h2 id="smaller-things">Smaller things</h2>
+<ul>
+<li><strong>The sidebar streak is a week strip.</strong> Instead of a gradient card, it shows &ldquo;31 days in a row&rdquo; with a square for each day of this week, filled in on the days you studied.</li>
+<li><strong>The current page is easier to spot in the sidebar.</strong> Its icon sits in a filled square, a bit like a hanko stamp.</li>
+<li><strong>Flatter everything.</strong> Buttons lost their gradients and glows, notifications are flat, and every dropdown in the app is now Momiji&rsquo;s own instead of the browser&rsquo;s.</li>
+<li><strong>Guests adding a big show.</strong> Guests can have up to 1,000 cards. Adding a whole series that would go over that used to fail completely, even with an empty deck. Now Momiji adds the most said words that fit and tells you how many it left out.</li>
+<li><strong>The phone menu stays on top.</strong> Opening the menu during a review used to leave the rating buttons drawn over it.</li>
+<li><strong>だろう and names.</strong> Names like チューたろう were being read as だろう, so they showed up as examples of the でしょう・だろう grammar point. That&rsquo;s fixed, and the point now explains what か adds in でしょうか.</li>
+</ul>
+<h2 id="the-landing-page">The landing page</h2>
+<p>The home page got the same treatment. &ldquo;Try it free&rdquo; made Momiji sound like a paid app with a trial, so the button just says <strong>Start learning</strong> now, and under it it says plainly that it&rsquo;s free with no paid plan. Japanese on the page has furigana and romaji so beginners can actually read it, and it says up front that sentence and grammar decks need an account, instead of surprising people later. On phones the links are in a menu now, and all the screenshots are the new pages.</p>
+
+
+
+
+
+<figure class='mb-5'>
+  <img src="/posts/16-a-new-look/landing-hero.jpg"  alt="The top of the landing page: Learn Japanese from the things you love, a Start learning button, and a screenshot of the new dashboard"  width="1440" height="900" />
+  
+  
+    <figcaption 
+      class=''
+    >
+      The top of the new landing page.
+    </figcaption>
+  
+</figure>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<p>Some pages still have the old look, and I&rsquo;ll get to them. I also want to see how the new tour goes with real beginners. If anything looks broken in the new design, especially sentence review, which I&rsquo;ve checked the least, please tell me on the Discord.</p>
+<p>Anyways, it&rsquo;s nice to open the app and have it finally look more the way I pictured it.</p>
+
+  
+</div>
+
+<section class="flex flex-col gap-10">
+  
+</section>
+
+
+
+
+    </main><footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+  © 2026
+  <a class="footer-brand" href="https://momiji.app">Momiji</a>
+  <span class="block sm:inline sm:ml-2">Data-driven Japanese learning for faster fluency and better retention.</span>
+</div>
+
+    <ul class="flex gap-5">
+  
+  <li>
+    <a href="https://discord.gg/7BfKduAvCC" target="_blank" rel="noopener noreferrer">Discord</a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/SakuryoLearning" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </li>
+  
+  <li>
+    <a href="https://www.instagram.com/momijijapaneselearning/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </li>
+  
+</ul>
+
+  </div>
+</footer>
+</body>
+</html>
