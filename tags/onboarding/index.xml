@@ -12,9 +12,16 @@
 			<copyright>{year}</copyright>
 		
 		
-			<lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://blog.momiji.app/tags/onboarding/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Changelog: A New Look, a Better First Five Minutes, and Offline for Everyone</title>
+				<link>https://blog.momiji.app/posts/16-a-new-look/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>https://blog.momiji.app/posts/16-a-new-look/</guid>
+				<description>&lt;h1 id=&#34;what-changed-in-momiji-since-the-last-post&#34;&gt;What changed in Momiji since the last post&lt;/h1&gt;&#xA;&lt;p&gt;The last post was only three days ago, but this round touched almost every page in the app, so it might look like a different app the next time you open it.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Changelog: A Friendlier Start, Better Reviews and a Browser Extension</title>
 				<link>https://blog.momiji.app/posts/12-a-friendlier-start/</link>

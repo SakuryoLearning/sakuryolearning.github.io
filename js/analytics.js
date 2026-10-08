@@ -1,6 +1,6 @@
 // Google Analytics 4 for the Momiji sites, with Google's Consent Mode v2, the
-// ad tags (Meta Pixel and Google Ads, for measuring our ads) and a small cookie
-// banner. The same
+// ad tags (Meta Pixel, Google Ads and Microsoft Advertising's UET tag, for
+// measuring our ads) and a small cookie banner. The same
 // file is in landing/src, frontend/src and hugo/sakuryo/static/js (the blog), so
 // change all three together.
 //
@@ -8,9 +8,10 @@
 // one site (momiji.app, the app, the blog) answers it for all of them.
 // No window when landing/scripts/prerender.js renders pages, hence the guards.
 
-// _v2: the banner used to cover only Google Analytics. Now that "Accept" also
-// covers the ad tags, everyone is asked again rather than assumed to agree.
-const CONSENT_COOKIE = "momiji_consent_v2";
+// _v3: each time "Accept" comes to cover another company's tag (v2: Meta and
+// Google Ads, v3: Microsoft Advertising), everyone is asked again rather than
+// assumed to agree.
+const CONSENT_COOKIE = "momiji_consent_v3";
 const ONE_YEAR = 60 * 60 * 24 * 365;
 
 // Where analytics waits for a yes: the EEA, the UK and Switzerland. Elsewhere
@@ -25,6 +26,7 @@ let started = false;
 let metaPixelId = "";
 let metaStarted = false;
 let adsId = "";
+let uetStarted = false;
 let privacyUrl = "https://momiji.app/privacy";
 
 // gtag.js reads the arguments object itself, so this can't be an arrow function
@@ -47,17 +49,24 @@ const loadScript = (src) => {
   document.head.appendChild(script);
 };
 
-// GA's own cookies (_ga, _ga_<id>), Google Ads' (_gcl_*, _gac_*) and the Meta
-// Pixel's (_fbp, _fbc), which they leave behind when consent is withdrawn
+// GA's own cookies (_ga, _ga_<id>), Google Ads' (_gcl_*, _gac_*), the Meta
+// Pixel's (_fbp, _fbc) and UET's (_uetsid, _uetvid, _uetmsclkid, also kept in
+// localStorage), which they leave behind when consent is withdrawn
+const UET_STORAGE = ["_uetsid", "_uetsid_exp", "_uetvid", "_uetvid_exp", "_uetmsclkid", "_uetmsclkid_exp"];
 const clearTrackingCookies = () => {
   for (const name of document.cookie.split("; ").map((c) => c.split("=")[0])) {
     if (
       name === "_ga" || name.startsWith("_ga_") || name.startsWith("_gcl_") || name.startsWith("_gac_") ||
-      name === "_fbp" || name === "_fbc"
+      name === "_fbp" || name === "_fbc" || name.startsWith("_uet")
     ) {
       document.cookie = `${name}=; max-age=0; path=/`;
       document.cookie = `${name}=; max-age=0; path=/${cookieDomain()}`;
     }
+  }
+  try {
+    for (const key of UET_STORAGE) localStorage.removeItem(key);
+  } catch {
+    // storage blocked: nothing was stored there either
   }
 };
 
@@ -80,6 +89,28 @@ const startMetaPixel = () => {
   fbq("track", "PageView");
 };
 
+// Microsoft's stock UET snippet, unpacked, behind its own consent mode: like the
+// Google Ads tag, it loads with the page, and until a yes it reads and writes no
+// cookies of its own. enableAutoSpaTracking counts the app's route changes as
+// page views.
+const startUet = (tagId, choice) => {
+  if (!tagId || uetStarted) return;
+  uetStarted = true;
+  window.uetq = window.uetq || [];
+  window.uetq.push("consent", "default", { ad_storage: "denied" });
+  if (choice) window.uetq.push("consent", "update", { ad_storage: choice });
+  const options = { ti: tagId, enableAutoSpaTracking: true };
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://bat.bing.net/bat.js?ti=${tagId}`;
+  script.onload = () => {
+    options.q = window.uetq;
+    window.uetq = new window.UET(options);
+    window.uetq.push("pageLoad");
+  };
+  document.head.appendChild(script);
+};
+
 // What one banner answer means for each of Google's consent signals
 const consentSignals = (choice) => ({
   analytics_storage: choice,
@@ -88,10 +119,10 @@ const consentSignals = (choice) => ({
   ad_personalization: choice,
 });
 
-// Starts GA (and Tag Manager and Google Ads, if given IDs) and, after a yes, the
-// Meta Pixel. Call once, and only where analytics should run (prod), before
-// anything is tracked.
-export function initAnalytics({ gaId, gtmId, metaPixelId: pixelId, adsId: googleAdsId, privacyPolicyUrl } = {}) {
+// Starts GA (and Tag Manager, Google Ads and Microsoft's UET tag, if given IDs)
+// and, after a yes, the Meta Pixel. Call once, and only where analytics should
+// run (prod), before anything is tracked.
+export function initAnalytics({ gaId, gtmId, metaPixelId: pixelId, adsId: googleAdsId, uetId, privacyPolicyUrl } = {}) {
   if (typeof window === "undefined" || started || !gaId) return;
   started = true;
   metaPixelId = pixelId || "";
@@ -111,6 +142,7 @@ export function initAnalytics({ gaId, gtmId, metaPixelId: pixelId, adsId: google
   const choice = readChoice();
   if (choice) gtag("consent", "update", consentSignals(choice));
   if (choice === "granted") startMetaPixel();
+  startUet(uetId, choice);
 
   gtag("set", "ads_data_redaction", true);
   gtag("js", new Date());
@@ -149,6 +181,13 @@ export function trackAdsConversion(label) {
   if (started && adsId) gtag("event", "conversion", { send_to: `${adsId}/${label}` });
 }
 
+// A Microsoft Advertising (UET) custom event, by its action, e.g.
+// trackMicrosoft("sign_up"). A conversion goal in Microsoft Ads matches on the
+// action. Consent mode applies as for the page views.
+export function trackMicrosoft(action, params = {}) {
+  if (uetStarted && window.uetq) window.uetq.push("event", action, params);
+}
+
 // Ties later events to a signed-in account (an opaque ID, never an email), so
 // GA can follow one learner across devices and visits.
 export function identify(userId) {
@@ -160,11 +199,12 @@ export function setConsent(choice) {
   const secure = location.protocol === "https:" ? "; secure" : "";
   document.cookie = `${CONSENT_COOKIE}=${choice}; max-age=${ONE_YEAR}; path=/; samesite=lax${cookieDomain()}${secure}`;
   if (started) gtag("consent", "update", consentSignals(choice));
+  if (uetStarted && window.uetq) window.uetq.push("consent", "update", { ad_storage: choice });
   if (choice === "granted") startMetaPixel();
   if (choice === "denied") {
     // A pixel that already loaded stays in memory until the page reloads, so
     // tell it to stop sending, then remove what the tags stored (Google's tags
-    // stop by themselves: their consent signals are now denied)
+    // and UET stop by themselves: their consent signals are now denied)
     if (metaStarted && window.fbq) window.fbq("consent", "revoke");
     clearTrackingCookies();
   }
@@ -186,7 +226,7 @@ export function showConsentBanner() {
 
   const text = document.createElement("p");
   text.style.cssText = "margin:0 0 12px;";
-  text.append("Momiji uses Google Analytics cookies to see which features people use, and the Meta (Facebook) Pixel and Google Ads tag to measure our ads on Facebook, Instagram and Google. Nothing is sold. ");
+  text.append("Momiji uses Google Analytics cookies to see which features people use, and the Meta (Facebook) Pixel, Google Ads and Microsoft Advertising tags to measure our ads on Facebook, Instagram, Google and Bing. Nothing is sold. ");
   const link = document.createElement("a");
   link.href = privacyUrl;
   link.textContent = "Privacy policy";

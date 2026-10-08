@@ -3,33 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.momiji.app/categories/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.momiji.app/tags/changelog/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.momiji.app/posts/15-review-anywhere/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <loc>https://blog.momiji.app/posts/16-a-new-look/</loc>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.momiji.app/tags/design/</loc>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.momiji.app/categories/development/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.momiji.app/tags/development/</loc>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.momiji.app/tags/onboarding/</loc>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.momiji.app/posts/</loc>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.momiji.app/tags/</loc>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.momiji.app/</loc>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.momiji.app/posts/15-review-anywhere/</loc>
     <lastmod>2026-10-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.momiji.app/tags/offline/</loc>
     <lastmod>2026-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.momiji.app/posts/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.momiji.app/tags/reviews/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.momiji.app/tags/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.momiji.app/</loc>
     <lastmod>2026-10-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.momiji.app/posts/14-sentences-for-you-scanning-and-sharing/</loc>
@@ -51,9 +60,6 @@
     <lastmod>2026-10-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.momiji.app/posts/12-a-friendlier-start/</loc>
-    <lastmod>2026-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.momiji.app/tags/onboarding/</loc>
     <lastmod>2026-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.momiji.app/tags/analytics/</loc>

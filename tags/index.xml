@@ -12,21 +12,35 @@
 			<copyright>{year}</copyright>
 		
 		
-			<lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://blog.momiji.app/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Changelog</title>
 				<link>https://blog.momiji.app/tags/changelog/</link>
-				<pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
 				<guid>https://blog.momiji.app/tags/changelog/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Design</title>
+				<link>https://blog.momiji.app/tags/design/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>https://blog.momiji.app/tags/design/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Development</title>
 				<link>https://blog.momiji.app/tags/development/</link>
-				<pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
 				<guid>https://blog.momiji.app/tags/development/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Onboarding</title>
+				<link>https://blog.momiji.app/tags/onboarding/</link>
+				<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>https://blog.momiji.app/tags/onboarding/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -69,13 +83,6 @@
 				<link>https://blog.momiji.app/tags/guest-mode/</link>
 				<pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
 				<guid>https://blog.momiji.app/tags/guest-mode/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Onboarding</title>
-				<link>https://blog.momiji.app/tags/onboarding/</link>
-				<pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>https://blog.momiji.app/tags/onboarding/</guid>
 				<description></description>
 			</item>
 			<item>
